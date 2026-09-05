@@ -1,0 +1,81 @@
+{
+  "tabs": {
+    "workers": "Workers",
+    "roles": "Roles",
+    "branches": "Branches"
+  },
+  "subtitle": {
+    "list": "Workers",
+    "edit": "Workers / {{name}}"
+  },
+  "entities": {
+    "role": "Role"
+  },
+  "addRole": {
+    "title": "Manage roles",
+    "placeholder": "Enter a new role name",
+    "addButton": "Add role",
+    "saving": "Saving..."
+  },
+  "branches": {
+    "addTitle": "Add branch",
+    "editTitle": "Edit branch",
+    "nameLabel": "Branch name",
+    "addressLabel": "Branch address",
+    "addButton": "ADD BRANCH"
+  },
+  "deleteStaff": {
+    "title": "Delete employee",
+    "confirm": "Are you sure you want to delete the employee {{name}}?"
+  },
+  "deleteBranch": {
+    "title": "Delete branch",
+    "confirm": "Are you sure you want to delete the branch {{name}}?"
+  },
+  "permissions": {
+    "access": "Access",
+    "rolesNotFound": "No roles found",
+    "empty": "No permissions available",
+    "active": "Active",
+    "roleN": "Role {{n}}",
+    "title": "Permissions",
+    "editRoleTitle": "Edit role",
+    "addRoleTitle": "Add role",
+    "roleName": "Role name",
+    "roleCode": "Role code",
+    "deleteRoleTitle": "Delete role",
+    "deleteRoleConfirm": "Are you sure you want to delete the role {{name}}?",
+    "deleteRoleWarning": "This action will delete the role and all associated permissions. This cannot be undone."
+  },
+  "branchesTable": {
+    "name": "Name",
+    "count": "Count",
+    "address": "Address",
+    "apiId": "API ID",
+    "notSpecified": "Not specified",
+    "empty": "No branches available"
+  },
+  "workersTable": {
+    "fullName": "Full name",
+    "email": "Email",
+    "branch": "Branch",
+    "role": "Role",
+    "apiId": "API ID",
+    "phone": "Phone"
+  },
+  "editWorker": {
+    "phoneLabel": "Phone",
+    "hourlyRate1": "Hourly rate 1",
+    "hourlyRate2": "Hourly rate 2"
+  },
+  "invite": {
+    "searching": "Searching...",
+    "notFound": "User not found",
+    "employeeLabel": "Employee",
+    "roleLabel": "Role",
+    "branchLabel": "Branch",
+    "userColorLabel": "User color",
+    "searchButton": "Search",
+    "inviteButton": "Invite to clinic"
+  }
+}

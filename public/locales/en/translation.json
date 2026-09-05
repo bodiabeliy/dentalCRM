@@ -1,0 +1,20 @@
+{
+  "welcome": "Welcome",
+  "schedule": "Schedule",
+  "save": "Save",
+  "cancel": "Cancel",
+  "search": "Search",
+  "saving": "Saving...",
+  "errors": {
+    "prefix": "Error: {{message}}",
+    "save-failed": "Failed to save changes"
+  },
+  "notifications": {
+    "saved": "Changes saved"
+  },
+  "add-role": {
+    "title": "Roles",
+    "placeholder": "Enter role",
+    "add-button": "ADD ROLE"
+  }
+}

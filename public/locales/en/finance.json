@@ -1,0 +1,29 @@
+{
+  "transfer": {
+    "title": "Transfer",
+    "from": "From",
+    "to": "To",
+    "fromRegister": "Cash register",
+    "toRegister": "Cash register",
+    "types": {
+      "cash": "Cash",
+      "card": "Personal card",
+      "terminal": "Terminal",
+      "qr": "QR payment",
+      "bank": "Bank"
+    },
+    "exchangeRate": "Exchange rate",
+    "amount": "Amount",
+    "uah": "₴",
+    "eur": "€",
+    "comment": "Comment",
+    "commentPlaceholder": "Enter a comment...",
+    "save": "SAVE",
+    "saveAndProcess": "SAVE AND PROCESS",
+    "registerName": {
+      "eur": "Register name EUR (€)",
+      "usd": "Register name USD ($)",
+      "uah": "Register name UAH (₴)"
+    }
+  }
+}

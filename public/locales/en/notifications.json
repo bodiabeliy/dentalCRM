@@ -1,0 +1,32 @@
+{
+  "loginSuccess": "You have successfully signed in!",
+  "logoutSuccess": "You have successfully signed out!",
+  "created": "{{entity}} created successfully!",
+  "updated": "{{entity}} updated successfully!",
+  "deleted": "{{entity}} deleted successfully!",
+  "clinicSwitch": "You switched to clinic \"{{clinicName}}\"",
+  "inviteSent": "Invitation sent successfully!",
+  "inviteAccepted": "Invitation accepted successfully!",
+  "inviteDeclined": "Invitation declined!",
+  "clinicPhotoUploaded": "Clinic photo uploaded successfully",
+  "profilePhotoUpdated": "Profile photo updated successfully",
+  "role": {
+    "created": "Role created successfully",
+    "updated": "Role updated successfully",
+    "deleted": "Role deleted successfully",
+    "permissionAdded": "Permission successfully added to role",
+    "permissionRemoved": "Permission successfully removed from role"
+  },
+  "branch": {
+    "created": "Branch created successfully",
+    "updated": "Branch updated successfully",
+    "deleted": "Branch deleted successfully"
+  },
+  "user": {
+    "accountCreated": "Account created",
+    "emailConfirmed": "Email confirmed successfully",
+    "passwordChanged": "Password changed successfully",
+    "resetCodeSent": "Password reset code sent to your email",
+    "confirmCodeSent": "Confirmation code sent to your email"
+  }
+}

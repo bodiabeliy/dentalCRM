@@ -1,0 +1,24 @@
+{
+  "sidebar": {
+    "main": "Головна",
+    "desktop": "Робочий стіл",
+    "schedule": "Розклад",
+    "lost-consultation": "Втрачені консультації",
+    "expired-consultation": "Прострочені послуги",
+    "patients": "Пацієнти",
+    "info": "Інформація",
+    "leads": "Ліди",
+    "chats": "Чати",
+    "tasks": "Задачі",
+    "finance": "Фінанси",
+    "bank-and-cash": "Банк і каса",
+    "purchases": "Закупівлі",
+    "management": "Управління",
+    "lab": "Лабораторія",
+    "reports": "Звіти",
+    "settings": "Налаштування"
+  },
+  "clinic-selector": {
+    "create-clinic": "Створити клініку"
+  }
+}

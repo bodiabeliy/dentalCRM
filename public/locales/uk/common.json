@@ -1,0 +1,32 @@
+{
+  "searchPlaceholder": "Пошук",
+  "filterButton": "Фільтр",
+  "rowsOnTable": "Рядків на сторінці",
+  "totalRows": "Всього",
+  "aria": {
+    "openDrawer": "Відкрити панель",
+    "showPassword": "Показати пароль",
+    "hidePassword": "Приховати пароль"
+  },
+  "actions": {
+    "save": "Зберегти",
+    "cancel": "Скасувати",
+    "close": "Закрити",
+    "edit": "Редагувати",
+    "delete": "Видалити",
+    "create": "Створити",
+    "add": "Додати",
+    "back": "Назад",
+    "next": "Далі",
+    "search": "Пошук",
+    "confirm": "Підтвердити",
+    "apply": "Застосувати",
+    "reset": "Скинути"
+  },
+  "status": {
+    "loading": "Завантаження...",
+    "noData": "Немає даних",
+    "error": "Сталася помилка",
+    "deleting": "Видаляється..."
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "tabs": {
+    "workers": "Працівники",
+    "roles": "Ролі",
+    "branches": "Філії"
+  },
+  "subtitle": {
+    "list": "Працівники",
+    "edit": "Працівники / {{name}}"
+  },
+  "entities": {
+    "role": "Роль"
+  },
+  "addRole": {
+    "title": "Керування ролями",
+    "placeholder": "Введіть назву нової ролі",
+    "addButton": "Додати роль",
+    "saving": "Збереження..."
+  },
+  "branches": {
+    "addTitle": "Додати філію",
+    "editTitle": "Редагувати філію",
+    "nameLabel": "Назва філії",
+    "addressLabel": "Адреса філії",
+    "addButton": "ДОДАТИ ФІЛІЮ"
+  },
+  "deleteStaff": {
+    "title": "Видалення працівника",
+    "confirm": "Ви дійсно хочете видалити працівника {{name}}?"
+  },
+  "deleteBranch": {
+    "title": "Видалення філії",
+    "confirm": "Ви дійсно хочете видалити філію {{name}}?"
+  },
+  "permissions": {
+    "access": "Доступ",
+    "rolesNotFound": "Ролі не знайдені",
+    "empty": "Немає доступних дозволів",
+    "active": "Активний",
+    "roleN": "Роль {{n}}",
+    "title": "Дозволи",
+    "editRoleTitle": "Редагувати роль",
+    "addRoleTitle": "Додати роль",
+    "roleName": "Назва ролі",
+    "roleCode": "Код ролі",
+    "deleteRoleTitle": "Видалення ролі",
+    "deleteRoleConfirm": "Ви дійсно хочете видалити роль {{name}}?",
+    "deleteRoleWarning": "Ця дія видалить роль та всі пов'язані з нею дозволи. Цю дію неможливо скасувати."
+  },
+  "branchesTable": {
+    "name": "Назва",
+    "count": "Кількість",
+    "address": "Адреса",
+    "apiId": "ID для API",
+    "notSpecified": "Не вказано",
+    "empty": "Немає доступних філій"
+  },
+  "workersTable": {
+    "fullName": "ПІБ",
+    "email": "Email",
+    "branch": "Філія",
+    "role": "Роль",
+    "apiId": "ID для API",
+    "phone": "Номер телефону"
+  },
+  "editWorker": {
+    "phoneLabel": "Номер телефону",
+    "hourlyRate1": "Погодинна ставка 1",
+    "hourlyRate2": "Погодинна ставка 2"
+  },
+  "invite": {
+    "searching": "Пошук...",
+    "notFound": "Користувача не знайдено",
+    "employeeLabel": "Працівник",
+    "roleLabel": "Роль",
+    "branchLabel": "Філія",
+    "userColorLabel": "Колір користувача",
+    "searchButton": "Пошук",
+    "inviteButton": "Запросити в клініку"
+  }
+}

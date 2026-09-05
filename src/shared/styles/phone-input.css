@@ -1,0 +1,100 @@
+.PhoneInput {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.23) !important;
+  border-radius: 8px !important;
+  background: #fff !important;
+  transition: border-color 0.2s;
+  height: 56px;
+  box-sizing: border-box;
+}
+
+.PhoneInputCountry {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-right: 8px;
+  margin-left: 16px;
+}
+
+.PhoneInputCountrySelect {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0 4px 0 0;
+  margin: 0;
+}
+
+.PhoneInputCountrySelect:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.PhoneInputCountryIcon {
+  width: 24px;
+  height: 18px;
+  margin-right: 8px;
+  display: block;
+  object-fit: contain;
+}
+
+.PhoneInputInput {
+  flex: 1;
+  border: none !important;
+  outline: none !important;
+  font-size: 16px;
+  font-family: inherit;
+  background: #fff !important;
+  color: #212121 !important;
+  padding: 16.5px 14px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  height: 100%;
+}
+
+/* Chrome autofill/dark mode fix */
+.PhoneInputInput:-webkit-autofill,
+.PhoneInputInput:-webkit-autofill:focus,
+.PhoneInputInput:-webkit-autofill:hover,
+.PhoneInputInput:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset !important;
+  box-shadow: 0 0 0 1000px #fff inset !important;
+  -webkit-text-fill-color: #212121 !important;
+  color: #212121 !important;
+  caret-color: #212121 !important;
+}
+
+/* Firefox autofill/dark mode fix */
+input.PhoneInputInput:-moz-autofill,
+input.PhoneInputInput:-moz-autofill:focus,
+input.PhoneInputInput:-moz-autofill:hover,
+input.PhoneInputInput:-moz-autofill:active {
+  box-shadow: 0 0 0 1000px #fff inset !important;
+  -moz-text-fill-color: #212121 !important;
+  color: #212121 !important;
+  caret-color: #212121 !important;
+}
+
+.PhoneInputInput:focus {
+  outline: none !important;
+}
+
+/* Material-UI focus styles */
+.PhoneInput:focus-within {
+  border-color: #1976d2 !important;
+  border-width: 2px;
+}
+
+/* Error state */
+.PhoneInput.error {
+  border-color: #d32f2f !important;
+}
+
+.PhoneInput.error:focus-within {
+  border-color: #d32f2f !important;
+}

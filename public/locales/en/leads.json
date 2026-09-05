@@ -1,0 +1,24 @@
+{
+  "pageTitle": "Leads",
+  "actoinButton": "Add lead",
+  "kanbanSelectDefault": "All",
+
+  "kanbanCardTitle": " {{title}} ",
+
+  "leadInfoBookButton": "Book",
+  "leadInfoPatientButton": "Patient",
+  "leadInfoTabMain": "Main",
+  "leadInfoTabNotices": "Notes",
+  "leadInfoTabCalls": "Calls",
+  "leadInfoTabTasks": "Tasks",
+
+  "leadInfoTEditButton": "Edit",
+  "leadInfoSystemTitle": "System information",
+
+  "leadInfoShortTableTitle": "Calls",
+  "leadInfoShortTableTActivity": "Last activity",
+  "leadInfoLastMassage": "Last message",
+  "leadInfoLastMassageActivity": "less than {{count}} minute",
+  "leadInfoTasksTitle": "Tasks",
+  "leadInfoTasksTitleActivity": "Last activity"
+}

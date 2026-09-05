@@ -1,0 +1,29 @@
+{
+  "transfer": {
+    "title": "Переміщення",
+    "from": "Звідки",
+    "to": "Куди",
+    "fromRegister": "Назва каси",
+    "toRegister": "Назва каси",
+    "types": {
+      "cash": "Каса",
+      "card": "Карта фіз особи",
+      "terminal": "Термінал",
+      "qr": "QR оплата",
+      "bank": "Банк"
+    },
+    "exchangeRate": "Курс",
+    "amount": "Сума",
+    "uah": "₴",
+    "eur": "€",
+    "comment": "Коментар",
+    "commentPlaceholder": "Введіть коментар...",
+    "save": "ЗБЕРЕГТИ",
+    "saveAndProcess": "ЗБЕРЕГТИ І ПРОВЕСТИ",
+    "registerName": {
+      "eur": "Назва каси EUR (€)",
+      "usd": "Назва каси USD ($)",
+      "uah": "Назва каси UAH (₴)"
+    }
+  }
+}

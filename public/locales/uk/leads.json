@@ -1,0 +1,24 @@
+{
+  "pageTitle": "Ліди",
+  "actoinButton": "Додати лід",
+  "kanbanSelectDefault": "Всі",
+
+  "kanbanCardTitle": " {{title}} ",
+
+  "leadInfoBookButton": "Записати",
+  "leadInfoPatientButton": "Пацієнт",
+  "leadInfoTabMain": "Головна",
+  "leadInfoTabNotices": "Нотатки",
+  "leadInfoTabCalls": "Дзвінки",
+  "leadInfoTabTasks": "Задачі",
+
+  "leadInfoTEditButton": "Редагувати",
+  "leadInfoSystemTitle": "Системна інформація",
+
+  "leadInfoShortTableTitle": "Дзвінки",
+  "leadInfoShortTableTActivity": "Остання активність",
+  "leadInfoLastMassage": "Останнє повідомлення",
+  "leadInfoLastMassageActivity": "менше {{count}} хвилини",
+  "leadInfoTasksTitle": "Задачі",
+  "leadInfoTasksTitleActivity": "Остання активність"
+}

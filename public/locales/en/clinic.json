@@ -1,0 +1,33 @@
+{
+  "create": {
+    "title": "Create clinic",
+    "welcome": "Welcome to the system, {{name}}!",
+    "welcomeSubtitle": "Start managing your clinic easily and conveniently!",
+    "yourClinic": "Your clinic",
+    "yourClinicNamed": "Your clinic “{{name}}”",
+    "patients": "{{count}} patients",
+    "staff": "{{count}} employees",
+    "goToClinic": "GO TO CLINIC",
+    "setupTitle": "Create a clinic and configure its operations",
+    "pitchTitle": "Launch an effective clinic management system today",
+    "pitchSubtitle": "Easily create a clinic and set up all important aspects of its operation: from patient appointments to financial management",
+    "createClinic": "Create clinic",
+    "waitingInviteTitle": "Waiting for an invitation?",
+    "invitePendingTitle": "No invitation received yet",
+    "invitePendingText": "Once your invitation is sent, it will appear here and you can join the clinic and continue working",
+    "inviteFrom": "Invitation from:",
+    "invitedToClinic": "You have been invited to a clinic!",
+    "inviteText": "You have received an invitation to join the clinic “{{clinic}}”. Click “Accept” to continue",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
+  "createForm": {
+    "nameLabel": "Clinic name",
+    "namePlaceholder": "Enter clinic name",
+    "branchNameLabel": "Main branch name",
+    "branchNamePlaceholder": "Enter branch name",
+    "branchAddressLabel": "Branch address",
+    "uploadTitle": "Clinic logo",
+    "uploadHint": "PNG or JPG, up to 5MB"
+  }
+}

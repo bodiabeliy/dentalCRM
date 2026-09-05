@@ -1,0 +1,24 @@
+{
+  "sidebar": {
+    "main": "Main",
+    "desktop": "Desktop",
+    "schedule": "Schedule",
+    "lost-consultation": "Lost consultations",
+    "expired-consultation": "Overdue services",
+    "patients": "Patients",
+    "info": "Info",
+    "leads": "Leads",
+    "chats": "Chats",
+    "tasks": "Tasks",
+    "finance": "Finance",
+    "bank-and-cash": "Bank and cash",
+    "purchases": "Purchases",
+    "management": "Management",
+    "lab": "Lab",
+    "reports": "Reports",
+    "settings": "Settings"
+  },
+  "clinic-selector": {
+    "create-clinic": "Create clinic"
+  }
+}

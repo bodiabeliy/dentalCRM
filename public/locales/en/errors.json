@@ -1,0 +1,26 @@
+{
+  "server": "Server error",
+  "networkNoResponse": "No response from server. Check your internet connection.",
+  "requestError": "Request error",
+  "badRequest": "Bad request. Please verify the entered data.",
+  "unauthorized": "Authorization required. Please sign in.",
+  "forbidden": "Access denied. You don't have permission to perform this action.",
+  "notFound": "Resource not found.",
+  "serverErrorDetailed": "Server error. Try again later or contact the administrator.",
+  "networkError": "Network error. Check your internet connection.",
+  "timeout": "Server response timeout. Try again later.",
+  "errors": {
+    "create": "Error creating: {{entity}}",
+    "update": "Error updating: {{entity}}",
+    "delete": "Error deleting: {{entity}}",
+    "fetch": "Error fetching data: {{entity}}"
+  },
+  "validation": {
+    "required": "Field is required",
+    "min8": "Minimum 8 characters",
+    "onlyLettersSpaces": "Field must contain only letters and spaces",
+    "invalidEmail": "Invalid email",
+    "invalidPhone": "Enter a valid phone number",
+    "passwordLettersDigits": "Password must contain letters and digits"
+  }
+}
