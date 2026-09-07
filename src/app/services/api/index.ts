@@ -1,7 +1,9 @@
 import axios from 'axios'
 
 const $api = axios.create({
-  baseURL: process.env.VITE_API_URL,
+  // baseURL: process.env.VITE_API_URL,
+  baseURL: "https://api-stage.dentelio.com",
+
   headers: {
     Accept: '*/*',
     'Content-Type': 'application/json',

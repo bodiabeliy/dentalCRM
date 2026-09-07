@@ -397,7 +397,7 @@ export function PatientEditPage() {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {patient.insurancePolicies??.map((policy) => (
+                {patient.insurancePolicies.map((policy) => (
                   <TableRow
                     key={policy.id}
                     sx={{

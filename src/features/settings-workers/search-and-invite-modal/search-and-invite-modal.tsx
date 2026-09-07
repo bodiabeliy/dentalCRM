@@ -248,7 +248,7 @@ export function SearchAndInviteModal({ open = true, onClose }: CreationModalProp
                     })
                   }
                 }}>
-                {rolesList?.items??.map((role) => (
+                {rolesList?.items.map((role) => (
                   <MenuItem key={role.id} value={role.name}>
                     {role.name}
                   </MenuItem>
@@ -271,7 +271,7 @@ export function SearchAndInviteModal({ open = true, onClose }: CreationModalProp
                     })
                   }
                 }}>
-                {subClinicsList?.map((subClinicItem) => (
+                {subClinicsList.map((subClinicItem) => (
                   <MenuItem key={subClinicItem.address} value={subClinicItem.name}>
                     {subClinicItem.name}
                   </MenuItem>
@@ -319,7 +319,7 @@ export function SearchAndInviteModal({ open = true, onClose }: CreationModalProp
                     handleFieldChange('color', selectedColor.name)
                   }
                 }}>
-                {(clinicReferencies.clinicColors || [])?.map((colorOption) => (
+                {(clinicReferencies.clinicColors || []).map((colorOption) => (
                   <MenuItem
                     key={colorOption.id}
                     value={colorOption.name}
