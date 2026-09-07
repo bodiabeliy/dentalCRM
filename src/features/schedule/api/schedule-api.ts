@@ -70,7 +70,6 @@ export const mapApiVisitToEvent = (
   const patientId = visit.patientId ?? visit.patient?.id
   let patient = visit.patient
   if (!patient && patients && patientId) {
-    // @ts-expect-error - TODO: fix this
     patient = patients.find((p) => p.id === patientId)
   }
 
