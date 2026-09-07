@@ -164,7 +164,7 @@ const CreateShiftModal: React.FC<CreateShiftModalProps> = ({
             value={cabinetId}
             onChange={(e) => setCabinetId(Number(e.target.value))}
             fullWidth>
-            {scheduleData?.cabinets.map((cab) => (
+            {scheduleData?.cabinets?.map((cab) => (
               <MenuItem key={cab.id} value={cab.id}>
                 {cab.name}
               </MenuItem>

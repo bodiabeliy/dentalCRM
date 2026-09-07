@@ -131,7 +131,7 @@ export function PriceContent() {
 
     const query = searchQuery.toLowerCase()
     return sections
-      .map((section) => ({
+      ?.map((section) => ({
         ...section,
         items:
           section.items?.filter(
@@ -173,7 +173,7 @@ export function PriceContent() {
 
   const handlePositionsReorder = (sectionId: number, reorderedPositions: IPricingItem[]) => {
     setSections((prevSections) =>
-      prevSections.map((section) => (section.id === sectionId ? { ...section, items: reorderedPositions } : section))
+      prevSections?.map((section) => (section.id === sectionId ? { ...section, items: reorderedPositions } : section))
     )
   }
 
@@ -188,7 +188,7 @@ export function PriceContent() {
 
       // Update local state
       setSections((prevSections) =>
-        prevSections.map((section) => (section.id === sectionId ? { ...section, color: newColorId } : section))
+        prevSections?.map((section) => (section.id === sectionId ? { ...section, color: newColorId } : section))
       )
 
       // Find the section to update on server
@@ -214,7 +214,7 @@ export function PriceContent() {
 
     if (section && newName.trim() && newName !== section.name) {
       // Update local state immediately for responsive UI
-      setSections((prevSections) => prevSections.map((s) => (s.id === sectionId ? { ...s, name: newName.trim() } : s)))
+      setSections((prevSections) => prevSections?.map((s) => (s.id === sectionId ? { ...s, name: newName.trim() } : s)))
 
       // Send update to server
       dispatch(updatePricing({ ...section, color: selectedColorObj?.id, name: newName.trim() }))
@@ -242,7 +242,7 @@ export function PriceContent() {
 
     // Optimistically update local state immediately for responsive UI
     setSections((prevSections) =>
-      prevSections.map((s) =>
+      prevSections?.map((s) =>
         s.id === sectionId ? { ...s, items: s.items?.filter((_, idx) => idx !== positionIndex) || [] } : s
       )
     )
@@ -281,11 +281,11 @@ export function PriceContent() {
 
     // Update local state immediately for responsive UI
     setSections((prevSections) =>
-      prevSections.map((s) =>
+      prevSections?.map((s) =>
         s.id === sectionId
           ? {
               ...s,
-              items: s.items?.map((item, idx) => (idx === positionIndex ? updatedPosition : item)) || [],
+              items: s.items??.map((item, idx) => (idx === positionIndex ? updatedPosition : item)) || [],
             }
           : s
       )
@@ -349,7 +349,7 @@ export function PriceContent() {
           </Box>
         ) : (
           systemColors?.clinicColors?.[0]?.color &&
-          filteredSections.map((section) => {
+          filteredSections?.map((section) => {
             // Find original index for drag and drop functionality
             const originalIndex = sections.findIndex((s) => s.id === section.id)
             return (
@@ -360,7 +360,7 @@ export function PriceContent() {
                   name: section.name,
                   color: resolveSectionColor(section.id, section.color ?? 0),
                   textColor: '#ffffff',
-                  positions: (section.items || []).map((item) => ({
+                  positions: (section.items || [])?.map((item) => ({
                     id: item.id.toString(),
                     name: item.name,
                     price: item.price,

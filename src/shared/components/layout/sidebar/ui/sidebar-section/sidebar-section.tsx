@@ -49,7 +49,7 @@ export function SidebarSectionComponent({
         </Typography>
       )}
       <List sx={{ p: 0, filter: isBlur ? 'blur(3px)' : 'none', pointerEvents: isBlur ? 'none' : 'auto' }}>
-        {section.items.map((item) => (
+        {section.items?.map((item) => (
           <SidebarItemComponent
             key={item.id}
             item={item}

@@ -86,7 +86,7 @@ export function SupplierOrderModal({ open, onClose }: SupplierOrderModalProps) {
           <FormControl fullWidth>
             <InputLabel>Компанія</InputLabel>
             <Select value={company} label="Компанія" onChange={(e) => setCompany(e.target.value)}>
-              {mockCompanies.map((company) => (
+              {mockCompanies?.map((company) => (
                 <MenuItem value={company.id} key={company.id}>
                   {company.name}
                 </MenuItem>
@@ -96,7 +96,7 @@ export function SupplierOrderModal({ open, onClose }: SupplierOrderModalProps) {
           <FormControl fullWidth>
             <InputLabel>Вид протезування</InputLabel>
             <Select value={prosthesisType} label="Вид протезування" onChange={(e) => setProsthesisType(e.target.value)}>
-              {mockProsthesisTypes.map((type) => (
+              {mockProsthesisTypes?.map((type) => (
                 <MenuItem value={type.id} key={type.id}>
                   {type.name}
                 </MenuItem>

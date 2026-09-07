@@ -38,7 +38,7 @@ export const PatientFinancesWidget: React.FC<PatientFinancesWidgetProps> = ({
 
   const handleSelectAll = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.checked) {
-      setSelectedDetails(details.map((d) => d.id))
+      setSelectedDetails(details?.map((d) => d.id))
     } else {
       setSelectedDetails([])
     }

@@ -77,7 +77,7 @@ export function DaysOffSection({ daysOff, setDaysOff }: DaysOffSectionProps) {
           variant="standard"
           disableUnderline
           sx={{ fontWeight: 500, mx: 1, minWidth: 100 }}>
-          {monthsUk.map((m, i) => (
+          {monthsUk?.map((m, i) => (
             <MenuItem value={i} key={m}>
               {m} {month.getFullYear()}
             </MenuItem>
@@ -93,7 +93,7 @@ export function DaysOffSection({ daysOff, setDaysOff }: DaysOffSectionProps) {
       <Box display="flex" justifyContent="center">
         <Box width="100%" maxWidth={420}>
           <Box display="flex" mb={1}>
-            {weekDays.map((wd) => (
+            {weekDays?.map((wd) => (
               <Box flex={1} key={wd} textAlign="center">
                 <Typography fontWeight={500} fontSize={14}>
                   {wd}
@@ -101,9 +101,9 @@ export function DaysOffSection({ daysOff, setDaysOff }: DaysOffSectionProps) {
               </Box>
             ))}
           </Box>
-          {weeks.map((week, wi) => (
+          {weeks?.map((week, wi) => (
             <Box key={wi} display="flex">
-              {week.map((day, di) => {
+              {week?.map((day, di) => {
                 if (!day) return <Box key={di} flex={1} height={40} />
                 const date = new Date(month.getFullYear(), month.getMonth(), day)
                 const isSelected = daysOff.includes(date)

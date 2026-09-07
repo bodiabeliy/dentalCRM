@@ -152,7 +152,7 @@ export function OverdueServicesPage() {
   const renderOverdueServices = (services: OverdueService['overdueServices']) => {
     return (
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.5 }}>
-        {services.map((service, index) => (
+        {services?.map((service, index) => (
           <Box key={index} sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
             <Typography variant="body2" sx={{ color: '#000' }}>
               {service.name}
@@ -337,7 +337,7 @@ export function OverdueServicesPage() {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {filteredServices.map((service, idx) => (
+                {filteredServices?.map((service, idx) => (
                   <TableRow
                     key={service.id}
                     sx={{

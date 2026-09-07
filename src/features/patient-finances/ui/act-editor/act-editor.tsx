@@ -156,7 +156,7 @@ export function ActEditor({ act, details, onClose, onSave }: ActEditorProps) {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {details.map((detail) => (
+                  {details?.map((detail) => (
                     <TableRow
                       key={detail.id}
                       sx={{
@@ -371,7 +371,7 @@ interface ActCategoryProps {
 const ActCategory = ({ items, expanded, onToggle }: ActCategoryProps) => {
   return (
     <Box>
-      {items.map((category) => (
+      {items?.map((category) => (
         <ActCategoryAccordion
           key={category.id}
           title={category.title}
@@ -429,7 +429,7 @@ function ActCategoryAccordion({ title, color, items, expanded, onToggle }: ActCa
         />
       </AccordionSummary>
       <AccordionDetails>
-        {items.map((item, index) => (
+        {items?.map((item, index) => (
           <Box
             key={index}
             sx={{

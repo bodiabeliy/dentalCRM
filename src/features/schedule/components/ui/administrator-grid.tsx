@@ -67,8 +67,8 @@ export const AdministratorGrid = React.memo(
 
     return (
       <>
-        {administratorsCabinets.map((dayAdministratorsCabinets, dayIdx) =>
-          dayAdministratorsCabinets.map((administratorCabinet) => {
+        {administratorsCabinets?.map((dayAdministratorsCabinets, dayIdx) =>
+          dayAdministratorsCabinets?.map((administratorCabinet) => {
             const cabinet = { id: administratorCabinet.id, name: administratorCabinet.name }
             const cIdx = cabinets.findIndex((cab) => cab.id === administratorCabinet.id)
             const administrators = administratorCabinet.administrators || []
@@ -76,7 +76,7 @@ export const AdministratorGrid = React.memo(
             const withMaxOverlap = getMaxOverlapCount(overlapped)
             const gap = 4
 
-            return withMaxOverlap.map((administrator) => {
+            return withMaxOverlap?.map((administrator) => {
               const {
                 scheduledTimeStart,
                 scheduledTimeEnd,

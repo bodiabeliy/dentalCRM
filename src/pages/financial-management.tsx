@@ -607,7 +607,7 @@ export function FinancialManagementPage() {
                       </TableRow>
                     </TableHead>
                     <TableBody>
-                      {sortedData.map((row, idx) => (
+                      {sortedData?.map((row, idx) => (
                         <TableRow
                           key={row.id}
                           sx={{
@@ -865,7 +865,7 @@ export function FinancialManagementPage() {
                       </TableRow>
                     </TableHead>
                     <TableBody>
-                      {zTableData.map((row) => (
+                      {zTableData?.map((row) => (
                         <TableRow
                           key={row.id}
                           sx={{

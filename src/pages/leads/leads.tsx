@@ -188,7 +188,7 @@ export function LeadsPage() {
   }
 
   const handleSelectAll = () => {
-    setSelectedLeads(filteredLeads.map((lead) => lead.id))
+    setSelectedLeads(filteredLeads?.map((lead) => lead.id))
   }
 
   const handleDeleteSelected = () => {

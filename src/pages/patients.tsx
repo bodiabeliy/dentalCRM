@@ -183,7 +183,7 @@ export function PatientsPage() {
   }
 
   const handleSelectAll = () => {
-    setSelectedPatients(filteredPatients.map((patient) => patient.id))
+    setSelectedPatients(filteredPatients?.map((patient) => patient.id))
   }
 
   const handleDeleteSelected = () => {

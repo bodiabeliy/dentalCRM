@@ -224,7 +224,7 @@ const CreateAdministratorShiftModal: React.FC<CreateAdministratorShiftModalProps
         <FormControl fullWidth sx={{ flex: 1, mt: 2 }}>
           <InputLabel>Кабінет</InputLabel>
           <Select label="Кабінет" value={cabinetId} onChange={(e) => setCabinetId(Number(e.target.value))} fullWidth>
-            {scheduleData?.cabinets.map((cab) => (
+            {scheduleData?.cabinets?.map((cab) => (
               <MenuItem key={cab.id} value={cab.id}>
                 {cab.name}
               </MenuItem>
@@ -295,7 +295,7 @@ const CreateAdministratorShiftModal: React.FC<CreateAdministratorShiftModalProps
                 gap: isMobile ? 1 : 0,
                 mt: 1,
               }}>
-              {times.map((time) => (
+              {times?.map((time) => (
                 <Box
                   onClick={() => handlePlannedDurationChange(time)}
                   sx={{
@@ -387,7 +387,7 @@ const CreateAdministratorShiftModal: React.FC<CreateAdministratorShiftModalProps
                 gap: isMobile ? 1 : 0,
                 mt: 1,
               }}>
-              {times.map((time) => (
+              {times?.map((time) => (
                 <Box
                   onClick={() => handleActualDurationChange(time)}
                   sx={{

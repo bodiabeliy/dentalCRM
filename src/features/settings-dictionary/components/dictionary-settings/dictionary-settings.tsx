@@ -41,7 +41,7 @@ export function DictionarySettings({ setSubtitle }: { setSubtitle: (subtitle: st
         React.createElement(DICTIONARY_SETTINGS_COMPONENTS[activeTab as keyof typeof DICTIONARY_SETTINGS_COMPONENTS])
       ) : (
         <>
-          {DICTIONARY_SETTINGS_TABS.map((tab) => (
+          {DICTIONARY_SETTINGS_TABS?.map((tab) => (
             <Box
               key={tab.id}
               sx={{
@@ -76,7 +76,7 @@ export function DictionarySettings({ setSubtitle }: { setSubtitle: (subtitle: st
                   gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
                   gap: '16px',
                 }}>
-                {tab.subitems.map((subitem) => (
+                {tab.subitems?.map((subitem) => (
                   <Box
                     key={subitem.id}
                     sx={{

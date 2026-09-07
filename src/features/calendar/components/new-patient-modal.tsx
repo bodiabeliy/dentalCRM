@@ -167,7 +167,7 @@ export const NewPatientModal: React.FC<NewPatientModalProps> = ({ open, onClose,
         <FormControl fullWidth margin="normal" error={!!errors.sex} sx={{ mt: 2, mb: 1, pl: 1 }}>
           <FormLabel sx={{ fontSize: 16, color: 'rgba(0,0,0,0.6)' }}>Стать</FormLabel>
           <RadioGroup value={sex} onChange={(e) => setSex(e.target.value)} row>
-            {sexOptions.map((option) => (
+            {sexOptions?.map((option) => (
               <FormControlLabel key={option} value={option} control={<Radio />} label={option} />
             ))}
           </RadioGroup>
@@ -208,7 +208,7 @@ export const NewPatientModal: React.FC<NewPatientModalProps> = ({ open, onClose,
         <FormControl fullWidth sx={{ mt: 2 }}>
           <InputLabel>Звідки дізнався</InputLabel>
           <MuiSelect value={referral} label="Звідки дізнався" onChange={(e) => setReferral(e.target.value)}>
-            {referralSources.map((src) => (
+            {referralSources?.map((src) => (
               <MenuItem value={src} key={src}>
                 {src}
               </MenuItem>

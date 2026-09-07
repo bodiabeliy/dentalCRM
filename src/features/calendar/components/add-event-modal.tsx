@@ -387,7 +387,7 @@ export const AddEventModal: React.FC<AddEventModalProps> = ({
               borderRadius: '8px',
             },
           }}>
-          {EVENT_STATUSES.map((status) => (
+          {EVENT_STATUSES?.map((status) => (
             <MenuItem
               key={status.value}
               onClick={() => handleStatusChange(status.value)}
@@ -550,7 +550,7 @@ export const AddEventModal: React.FC<AddEventModalProps> = ({
                     pointerEvents: 'none',
                   },
                 }}>
-                {rooms.map((room) => (
+                {rooms?.map((room) => (
                   <MenuItem key={room.id} value={room.id.toString()}>
                     {room.name}
                   </MenuItem>
@@ -660,7 +660,7 @@ export const AddEventModal: React.FC<AddEventModalProps> = ({
                 gap: isMobile ? 2 : 0,
               }}>
               <Box sx={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: isMobile ? 1 : 0 }}>
-                {times.map((time) => (
+                {times?.map((time) => (
                   <Box
                     onClick={() => handleDurationChange(time)}
                     sx={{
@@ -732,7 +732,7 @@ export const AddEventModal: React.FC<AddEventModalProps> = ({
                     },
                   },
                 }}>
-                {patientsStatuses.map((status) => {
+                {patientsStatuses?.map((status) => {
                   const statusValue = status.value as PatientsStatuses
                   const IconComponent = PATIENTS_STATUSES[statusValue]?.icon
                   const label = t(PATIENTS_STATUSES[statusValue]?.label)

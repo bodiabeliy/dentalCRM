@@ -78,7 +78,7 @@ export function EditModal({ open, onClose, onSave }: EditModalProps) {
   const handlePhoneChange = (index: number, field: keyof Phone, value: string) => {
     setFormData((prev) => ({
       ...prev,
-      phones: prev.phones.map((phone, i) => (i === index ? { ...phone, [field]: value } : phone)),
+      phones: prev.phones?.map((phone, i) => (i === index ? { ...phone, [field]: value } : phone)),
     }))
   }
 
@@ -135,7 +135,7 @@ export function EditModal({ open, onClose, onSave }: EditModalProps) {
           </FormControl>
         </Box>
 
-        {formData.phones.map((phone, index) => (
+        {formData.phones?.map((phone, index) => (
           <Box key={index} sx={{ display: 'flex', gap: 2, pt: 2, alignItems: 'center' }}>
             <FormControl fullWidth>
               <TextField

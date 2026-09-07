@@ -195,7 +195,7 @@ export function MentionTextField({
             }}>
             Пропозиції
           </Typography>
-          {suggestions.map((user, index) => (
+          {suggestions?.map((user, index) => (
             <Box
               key={user.id}
               onClick={() => handleSuggestionClick(user)}

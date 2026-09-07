@@ -68,7 +68,7 @@ export function RefundModal({ open, onClose }: RefundModalProps) {
           <FormControl fullWidth>
             <InputLabel>Пацієнт</InputLabel>
             <Select value={patient} label="Пацієнт" onChange={(e) => setPatient(e.target.value)}>
-              {mockPatients.map((patient) => (
+              {mockPatients?.map((patient) => (
                 <MenuItem value={patient.id} key={patient.id}>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                     <Avatar sx={{ width: 24, height: 24, fontSize: 12 }}>{patient.avatar}</Avatar>
@@ -90,7 +90,7 @@ export function RefundModal({ open, onClose }: RefundModalProps) {
           <FormControl fullWidth>
             <InputLabel>Вид платежу</InputLabel>
             <Select value={paymentType} label="Вид платежу" onChange={(e) => setPaymentType(e.target.value)}>
-              {mockPaymentTypes.map((type) => (
+              {mockPaymentTypes?.map((type) => (
                 <MenuItem value={type.id} key={type.id}>
                   {type.name}
                 </MenuItem>
@@ -100,7 +100,7 @@ export function RefundModal({ open, onClose }: RefundModalProps) {
           <FormControl fullWidth>
             <InputLabel>Каса</InputLabel>
             <Select value={cashRegister} label="Каса" onChange={(e) => setCashRegister(e.target.value)}>
-              {mockCashRegisters.map((register) => (
+              {mockCashRegisters?.map((register) => (
                 <MenuItem value={register.id} key={register.id}>
                   {register.name}
                 </MenuItem>

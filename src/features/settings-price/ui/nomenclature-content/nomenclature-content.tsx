@@ -48,7 +48,7 @@ export function NomenclatureContent() {
         onAddSection={handleAddSection}
       />
       <Box sx={{ mt: 3 }}>
-        {mockNomenclature.map((nomenclature) => (
+        {mockNomenclature?.map((nomenclature) => (
           <NomenclatureAccordion
             key={nomenclature.id}
             section={nomenclature}

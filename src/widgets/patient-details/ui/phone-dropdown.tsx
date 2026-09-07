@@ -45,7 +45,7 @@ export function PhoneDropdown({ phoneNumbers, onCallHistoryClick, anchorEl, onCl
           Історія дзвінків та СМС
         </Box>
         <Divider />
-        {phoneNumbers.map((phone, index) => (
+        {phoneNumbers?.map((phone, index) => (
           <Box
             key={index}
             sx={{

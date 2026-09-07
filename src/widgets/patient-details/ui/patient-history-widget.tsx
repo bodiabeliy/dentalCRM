@@ -207,7 +207,7 @@ export function PatientHistoryWidget({ patientId }: PatientHistoryWidgetProps) {
               </Box>
               <Box
                 sx={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr 1fr' : 'repeat(6, 1fr)', mt: 2, gap: 1 }}>
-                {mockImages.map((image, index) => (
+                {mockImages?.map((image, index) => (
                   <Box
                     key={index}
                     sx={{

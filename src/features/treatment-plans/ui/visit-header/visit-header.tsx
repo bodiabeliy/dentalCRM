@@ -144,7 +144,7 @@ export function VisitHeader({
           },
         }}
         MenuListProps={{ sx: { p: 0 } }}>
-        {Object.entries(groupedEmployees).map(([category, employees]) => (
+        {Object.entries(groupedEmployees)?.map(([category, employees]) => (
           <Box key={category}>
             <MenuItem
               sx={{
@@ -170,7 +170,7 @@ export function VisitHeader({
                 }}
               />
             </MenuItem>
-            {employees.map((employee) => (
+            {employees?.map((employee) => (
               <MenuItem
                 key={employee.id}
                 onClick={() => handleDoctorSelect(employee.id)}

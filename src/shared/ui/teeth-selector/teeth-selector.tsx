@@ -82,7 +82,7 @@ export function TeethSelector({ onSelect }: TeethSelectorProps) {
           },
         }}
         MenuListProps={{ sx: { p: 0 } }}>
-        {teethOptions.map((option, idx) => (
+        {teethOptions?.map((option, idx) => (
           <MenuItem
             key={option.value}
             onClick={() => handleSelect(option.value)}

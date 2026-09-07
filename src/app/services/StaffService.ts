@@ -131,7 +131,7 @@ export const updateStuffProfile = (staffData: IStaff) => async (dispatch: AppDis
       const currentStaffs = [...StaffReducer.staffs]
 
       // Find and update the staff in the array
-      const updatedStaffs = currentStaffs.map((staff) => (staff.id === id ? { ...staff, ...updatedStaff } : staff))
+      const updatedStaffs = currentStaffs?.map((staff) => (staff.id === id ? { ...staff, ...updatedStaff } : staff))
 
       // Update the staffs array in Redux
       dispatch(getStuffs(updatedStaffs))

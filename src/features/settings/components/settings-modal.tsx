@@ -154,7 +154,7 @@ export const SettingsModal = ({ open, onClose }: { open: boolean; onClose: () =>
 
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: '16px', padding: '24px', alignItems: 'center' }}>
         <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
-          {cabinets.map((cabinet) => (
+          {cabinets?.map((cabinet) => (
             <Box key={cabinet.id} sx={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <Switch
                 checked={enabledCabinets.includes(cabinet.id)}
@@ -185,7 +185,7 @@ export const SettingsModal = ({ open, onClose }: { open: boolean; onClose: () =>
               flexGrow: 1,
             }}>
             <MenuItem value="">{t('all-doctors')}</MenuItem>
-            {doctors.map((doctor) => (
+            {doctors?.map((doctor) => (
               <MenuItem key={doctor.id} value={doctor.id.toString()}>
                 {doctor.name}
               </MenuItem>

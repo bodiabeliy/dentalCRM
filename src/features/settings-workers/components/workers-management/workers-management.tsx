@@ -98,7 +98,7 @@ export function StuffsManagement({ setSubtitle }: { setSubtitle: (subtitle: stri
     if (subClinics && subClinics.length > 0) {
       console.log('Transforming subClinics to branches:', subClinics.length)
 
-      const transformedBrances: ISubClinic[] = subClinics.map((subClinic) => ({
+      const transformedBrances: ISubClinic[] = subClinics?.map((subClinic) => ({
         id: subClinic.id,
         name: subClinic.name,
         usersCount: 0, // Set a default value or calculate if available
@@ -206,7 +206,7 @@ export function StuffsManagement({ setSubtitle }: { setSubtitle: (subtitle: stri
               color: '#0029d9',
             },
           }}>
-          {[t('workers:tabs.workers'), t('workers:tabs.roles'), t('workers:tabs.branches')].map((label) => (
+          {[t('workers:tabs.workers'), t('workers:tabs.roles'), t('workers:tabs.branches')]?.map((label) => (
             <Tab
               key={label}
               sx={{

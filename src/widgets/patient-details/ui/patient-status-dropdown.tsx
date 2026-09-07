@@ -31,7 +31,7 @@ export function PatientStatusDropdown({ patient, onStatusChange, anchorEl }: Pat
           borderRadius: 2,
         },
       }}>
-      {Object.entries(STATUS_LABELS).map(([status, label]) => (
+      {Object.entries(STATUS_LABELS)?.map(([status, label]) => (
         <MenuItem
           key={status}
           onClick={() => onStatusChange(status as Patient['status'])}

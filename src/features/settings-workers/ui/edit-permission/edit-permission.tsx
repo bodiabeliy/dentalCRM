@@ -53,7 +53,7 @@ export function EditPermissionDialog({ open, role, onClose, onSave }: EditPermis
   const handlePermissionChange = (permission: IRolePermition) => {
     setFormData((prev) => ({
       ...prev,
-      permissions: prev.permissions.map((p) => (p.id === permission.id ? { ...p, assigned: !p.assigned } : p)),
+      permissions: prev.permissions?.map((p) => (p.id === permission.id ? { ...p, assigned: !p.assigned } : p)),
     }))
   }
 
@@ -94,7 +94,7 @@ export function EditPermissionDialog({ open, role, onClose, onSave }: EditPermis
         </Typography>
 
         <Box sx={{ maxHeight: '300px', overflowY: 'auto', mt: 2, mb: 2 }}>
-          {formData.permissions.map((permission) => (
+          {formData.permissions?.map((permission) => (
             <FormControlLabel
               key={permission.id}
               control={

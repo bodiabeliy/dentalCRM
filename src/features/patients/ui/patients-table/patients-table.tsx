@@ -73,7 +73,7 @@ export function PatientsTable({
 
   const handleSelectAll = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.checked) {
-      onSelectionChange(patients.map((patient) => patient.id))
+      onSelectionChange(patients?.map((patient) => patient.id))
     } else {
       onSelectionChange([])
     }
@@ -260,7 +260,7 @@ export function PatientsTable({
             </TableRow>
           </TableHead>
           <TableBody>
-            {sortedPatients.map((patient, idx) => (
+            {sortedPatients?.map((patient, idx) => (
               <TableRow
                 key={patient.id}
                 onContextMenu={(event) => handleContextMenu(event, patient)}

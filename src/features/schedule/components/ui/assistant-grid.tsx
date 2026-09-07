@@ -77,8 +77,8 @@ export const AssistantGrid = React.memo(
 
     return (
       <>
-        {assistantsCabinets.map((dayAssistantsCabinets, dayIdx) =>
-          dayAssistantsCabinets.map((assistantCabinet) => {
+        {assistantsCabinets?.map((dayAssistantsCabinets, dayIdx) =>
+          dayAssistantsCabinets?.map((assistantCabinet) => {
             const cabinet = cabinets.find((cab) => cab.id === assistantCabinet.id)
             if (!cabinet) return null
 
@@ -88,7 +88,7 @@ export const AssistantGrid = React.memo(
             const withMaxOverlap = getMaxOverlapCount(overlapped)
             const gap = 4
 
-            return withMaxOverlap.map((assistant) => {
+            return withMaxOverlap?.map((assistant) => {
               const {
                 scheduledTimeStart,
                 scheduledTimeEnd,

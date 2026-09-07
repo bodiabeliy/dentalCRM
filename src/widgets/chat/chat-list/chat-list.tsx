@@ -31,7 +31,7 @@ export function ChatList({ chats, onChatSelect }: ChatListProps) {
       </Box>
       <ChatFilters />
       <Box sx={{ flex: 1, overflowY: 'auto' }}>
-        {chats.map((chat) => (
+        {chats?.map((chat) => (
           <Box
             key={chat.id}
             sx={{

@@ -136,7 +136,7 @@ export function LeadForm({ isMobile, activeTab }: LeadFormProps) {
               />
             )}
             renderTags={() =>
-              LEAD_STATUS_TAG.map((option, index) => (
+              LEAD_STATUS_TAG?.map((option, index) => (
                 <Chip
                   key={index}
                   label={option?.title}
@@ -176,7 +176,7 @@ export function LeadForm({ isMobile, activeTab }: LeadFormProps) {
             getOptionLabel={(option) => option?.title}
             defaultValue={[LEAD_TAG[0]]}
             renderValue={(values, getItemProps) =>
-              values.map((option, index) => {
+              values?.map((option, index) => {
                 const { key, ...itemProps } = getItemProps({ index })
                 return (
                   <Chip
@@ -310,7 +310,7 @@ export function LeadForm({ isMobile, activeTab }: LeadFormProps) {
                 'UTM_medium',
                 'IP адрес',
                 'Page_Order',
-              ].map((label) => (
+              ]?.map((label) => (
                 <FormField
                   isDisabled
                   key={label}

@@ -35,7 +35,7 @@ export function PriceSettings({ setSubtitle }: { setSubtitle: (subtitle: string)
             ml: 'auto',
             maxWidth: '100%',
           }}>
-          {TAB_LABELS.map((label) => (
+          {TAB_LABELS?.map((label) => (
             <Tab
               key={label}
               sx={{

@@ -280,7 +280,7 @@ export const ScheduleGrid = React.memo(
       setAssistantEmptyCellContextMenu(null)
     }, [])
 
-    const assistantsCabinetsByDay: AssistantCabinet[][] = days.map((day) => {
+    const assistantsCabinetsByDay: AssistantCabinet[][] = days?.map((day) => {
       const dayKey = format(day, 'yyyy-MM-dd')
       if (!assistantsData || !assistantsData[dayKey]) {
         return []
@@ -344,7 +344,7 @@ export const ScheduleGrid = React.memo(
       setAdministratorContextMenu({ x: e.clientX, y: e.clientY, administratorId })
     }, [])
 
-    const administratorsCabinetsByDay: AdministratorCabinet[][] = days.map((day) => {
+    const administratorsCabinetsByDay: AdministratorCabinet[][] = days?.map((day) => {
       const dayKey = format(day, 'yyyy-MM-dd')
       const dayData = administratorsData?.[dayKey]
       if (
@@ -354,11 +354,11 @@ export const ScheduleGrid = React.memo(
         Array.isArray((dayData as { cabinets: unknown }).cabinets)
       ) {
         const cabinets = (dayData as { cabinets: AdministratorCabinet[] }).cabinets
-        return ADMIN_ROLES.map(
+        return ADMIN_ROLES?.map(
           (role) => cabinets.find((c: AdministratorCabinet) => c.id === role.id) || { ...role, administrators: [] }
         )
       }
-      return ADMIN_ROLES.map((role) => ({ ...role, administrators: [] }))
+      return ADMIN_ROLES?.map((role) => ({ ...role, administrators: [] }))
     })
 
     const handleAdministratorEmptyCellContextMenu = useCallback(
@@ -639,7 +639,7 @@ export const ScheduleGrid = React.memo(
                       onDragOver={handleDragOver}
                       onDrop={handleDrop}
                     />
-                    {allShifts.map((shift) => {
+                    {allShifts?.map((shift) => {
                       const dayIdx = days.findIndex((d) => format(d, 'yyyy-MM-dd') === shift.date)
                       const cIdx = gridCabinets.findIndex((cab) => cab.id === shift.cabinetId)
                       if (dayIdx === -1 || cIdx === -1) return null
@@ -657,7 +657,7 @@ export const ScheduleGrid = React.memo(
                         />
                       )
                     })}
-                    {events.map(({ event, day, dayIdx, cIdx }) => (
+                    {events?.map(({ event, day, dayIdx, cIdx }) => (
                       <GridEvent
                         key={`event-${dayIdx}-${event.id}`}
                         event={event}

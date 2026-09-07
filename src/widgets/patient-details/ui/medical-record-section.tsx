@@ -17,7 +17,7 @@ const sectionLabels = {
 export function MedicalRecordSection({ sections }: MedicalRecordSectionProps) {
   return (
     <Box sx={{ background: '#e6e9f7', borderRadius: 1, mt: 2 }}>
-      {Object.entries(sections).map(([key, value]) => {
+      {Object.entries(sections)?.map(([key, value]) => {
         if (!value) return null
         return (
           <Box

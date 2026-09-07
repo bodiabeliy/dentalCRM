@@ -511,15 +511,15 @@ export const PatientVisitsList: React.FC<PatientVisitsListProps> = ({
               Вересень 2024
             </Typography>
           </Box>
-          {visits.map(renderVisitRow)}
-          {reminders.slice(0, 1).map(renderReminderRow)}
+          {visits?.map(renderVisitRow)}
+          {reminders.slice(0, 1)?.map(renderReminderRow)}
           <Box sx={monthHeaderStyles}>
             <Typography variant="h6" sx={monthTitleStyles}>
               Жовтень 2024
             </Typography>
           </Box>
-          {visits.map(renderVisitRow)}
-          {reminders.slice(1, 2).map(renderReminderRow)}
+          {visits?.map(renderVisitRow)}
+          {reminders.slice(1, 2)?.map(renderReminderRow)}
         </Box>
       </Box>
       <ReminderModal

@@ -157,7 +157,7 @@ export function TreatmentPlanCard({ plan, isAgreed }: TreatmentPlanCardProps) {
               </Box>
             )}
           </Box>
-          {plan.visits.map((visit) => (
+          {plan.visits?.map((visit) => (
             <Box key={visit.id}>
               <Box
                 sx={{
@@ -184,7 +184,7 @@ export function TreatmentPlanCard({ plan, isAgreed }: TreatmentPlanCardProps) {
                 <Typography variant="body2">₴ {visit.totalPrice.toLocaleString()}</Typography>
               </Box>
               <Box>
-                {visit.procedures.map((procedure, index) => (
+                {visit.procedures?.map((procedure, index) => (
                   <Box
                     key={procedure.id}
                     sx={{

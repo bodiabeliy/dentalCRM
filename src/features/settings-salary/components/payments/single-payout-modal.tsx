@@ -65,7 +65,7 @@ export default function SinglePayoutModal({ open, onClose }: { open: boolean; on
           <FormControl fullWidth>
             <InputLabel>За місяць</InputLabel>
             <Select value={month} label="За місяць" onChange={(e) => setMonth(e.target.value)}>
-              {monthsUk.map((m) => (
+              {monthsUk?.map((m) => (
                 <MenuItem value={m} key={m}>
                   {m}
                 </MenuItem>
@@ -75,7 +75,7 @@ export default function SinglePayoutModal({ open, onClose }: { open: boolean; on
           <FormControl fullWidth>
             <InputLabel>Співробітник</InputLabel>
             <Select value={employee} label="Співробітник" onChange={(e) => setEmployee(e.target.value)}>
-              {mockEmployees.map((emp) => (
+              {mockEmployees?.map((emp) => (
                 <MenuItem value={emp.id} key={emp.id}>
                   {emp.name}
                 </MenuItem>

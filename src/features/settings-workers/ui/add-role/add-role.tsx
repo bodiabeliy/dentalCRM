@@ -38,7 +38,7 @@ export function AddRoleDialog({ open, onClose, onSave }: AddRoleDialogProps) {
   useEffect(() => {
     if (open && rolesList?.items?.length) {
       const sorted = [...rolesList.items].sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
-      setItems(sorted.map((r) => ({ id: r.id as number, name: r.name, order: r.order })))
+      setItems(sorted?.map((r) => ({ id: r.id as number, name: r.name, order: r.order })))
     } else if (!open) {
       setItems([])
     }
@@ -67,8 +67,8 @@ export function AddRoleDialog({ open, onClose, onSave }: AddRoleDialogProps) {
 
     // Check if order changed vs store
     const original = (rolesList?.items ?? []).slice().sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
-    const originalIds = original.map((r) => r.id).join(',')
-    const currentIds = items.map((i) => i.id).join(',')
+    const originalIds = original?.map((r) => r.id).join(',')
+    const currentIds = items?.map((i) => i.id).join(',')
     const hasOrderChanged = originalIds !== currentIds
 
     try {
@@ -153,7 +153,7 @@ export function AddRoleDialog({ open, onClose, onSave }: AddRoleDialogProps) {
     if (!open) return false
     const original = (rolesList?.items ?? []).slice().sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
     if (!original.length || !items.length) return false
-    return original.map((r) => r.id).join(',') !== items.map((i) => i.id).join(',')
+    return original?.map((r) => r.id).join(',') !== items?.map((i) => i.id).join(',')
   }, [open, rolesList, items])
 
   return (
@@ -167,7 +167,7 @@ export function AddRoleDialog({ open, onClose, onSave }: AddRoleDialogProps) {
       <DialogContent sx={{ p: 3 }}>
         {items.length > 0 && (
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }} onDragOver={handleDragOver}>
-            {items.map((item, index) => (
+            {items?.map((item, index) => (
               <Box
                 key={item.id}
                 draggable
@@ -195,7 +195,7 @@ export function AddRoleDialog({ open, onClose, onSave }: AddRoleDialogProps) {
           </Box>
         )}
 
-        {roles.map((role, index) => (
+        {roles?.map((role, index) => (
           <Box
             sx={{
               display: 'flex',

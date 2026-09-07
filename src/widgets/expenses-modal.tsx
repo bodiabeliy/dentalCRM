@@ -176,7 +176,7 @@ export default function ExpensesModal({ open, onClose, onSave }: ExpensesModalPr
           <FormControl fullWidth>
             <InputLabel>Грошовий потік</InputLabel>
             <Select value={cashFlow} label="Грошовий потік" onChange={(e) => setCashFlow(e.target.value)}>
-              {CASH_FLOWS.map((flow) => (
+              {CASH_FLOWS?.map((flow) => (
                 <MenuItem value={flow.value} key={flow.value}>
                   {flow.label}
                 </MenuItem>
@@ -186,7 +186,7 @@ export default function ExpensesModal({ open, onClose, onSave }: ExpensesModalPr
           <FormControl component="fieldset">
             <FormLabel component="legend">Тип</FormLabel>
             <RadioGroup value={paymentType} onChange={(e) => setPaymentType(e.target.value)} row>
-              {PAYMENT_TYPES.map((type) => (
+              {PAYMENT_TYPES?.map((type) => (
                 <FormControlLabel key={type.value} value={type.value} control={<Radio />} label={type.label} />
               ))}
             </RadioGroup>
@@ -195,7 +195,7 @@ export default function ExpensesModal({ open, onClose, onSave }: ExpensesModalPr
             <FormControl fullWidth>
               <InputLabel>Назва каси</InputLabel>
               <Select value={cashRegister} label="Назва каси" onChange={(e) => setCashRegister(e.target.value)}>
-                {CASH_REGISTERS.map((register) => (
+                {CASH_REGISTERS?.map((register) => (
                   <MenuItem value={register.value} key={register.value}>
                     {register.label}
                   </MenuItem>
@@ -227,7 +227,7 @@ export default function ExpensesModal({ open, onClose, onSave }: ExpensesModalPr
           <FormControl fullWidth>
             <InputLabel>Стаття витрати</InputLabel>
             <Select value={expenseArticle} label="Стаття витрати" onChange={(e) => setExpenseArticle(e.target.value)}>
-              {EXPENSE_ARTICLES.map((article) => (
+              {EXPENSE_ARTICLES?.map((article) => (
                 <MenuItem value={article.value} key={article.value}>
                   {article.label}
                 </MenuItem>
@@ -240,7 +240,7 @@ export default function ExpensesModal({ open, onClose, onSave }: ExpensesModalPr
               value={expenseRelation}
               label="Відношення витрати"
               onChange={(e) => setExpenseRelation(e.target.value)}>
-              {EXPENSE_RELATIONS.map((relation) => (
+              {EXPENSE_RELATIONS?.map((relation) => (
                 <MenuItem value={relation.value} key={relation.value}>
                   {relation.label}
                 </MenuItem>
@@ -250,7 +250,7 @@ export default function ExpensesModal({ open, onClose, onSave }: ExpensesModalPr
           <FormControl fullWidth>
             <InputLabel>Контрагент</InputLabel>
             <Select value={counterparty} label="Контрагент" onChange={(e) => setCounterparty(e.target.value)}>
-              {COUNTERPARTIES.map((cp) => (
+              {COUNTERPARTIES?.map((cp) => (
                 <MenuItem value={cp.value} key={cp.value}>
                   {cp.label}
                 </MenuItem>
@@ -260,7 +260,7 @@ export default function ExpensesModal({ open, onClose, onSave }: ExpensesModalPr
           <FormControl fullWidth>
             <InputLabel>Договір</InputLabel>
             <Select value={agreement} label="Договір" onChange={(e) => setAgreement(e.target.value)}>
-              {AGREEMENTS.map((agreement) => (
+              {AGREEMENTS?.map((agreement) => (
                 <MenuItem value={agreement.value} key={agreement.value}>
                   {agreement.label}
                 </MenuItem>
@@ -273,7 +273,7 @@ export default function ExpensesModal({ open, onClose, onSave }: ExpensesModalPr
               value={relatedDocument}
               label="Зв'язаний документ"
               onChange={(e) => setRelatedDocument(e.target.value)}>
-              {RELATED_DOCUMENTS.map((doc) => (
+              {RELATED_DOCUMENTS?.map((doc) => (
                 <MenuItem value={doc.value} key={doc.value}>
                   {doc.label}
                 </MenuItem>

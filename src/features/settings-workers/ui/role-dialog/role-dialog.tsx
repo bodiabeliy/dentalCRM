@@ -44,12 +44,12 @@ export function RoleDialog({ open, onClose, roles, onRolesChange, onSave }: Role
   // Whenever references update or dialog opens, seed local items list
   useEffect(() => {
     if (!open) return
-    const rolesFromRefs = (clinicRefs.roles || []).map((r) => ({ id: r.id, name: r.name }))
+    const rolesFromRefs = (clinicRefs.roles || [])?.map((r) => ({ id: r.id, name: r.name }))
     if (rolesFromRefs.length) {
       setItems(rolesFromRefs)
     } else {
       // fallback to provided roles prop if references are empty (maps value->name)
-      const fallback = (roles || []).map((r, idx) => ({ id: String(idx), name: r.value }))
+      const fallback = (roles || [])?.map((r, idx) => ({ id: String(idx), name: r.value }))
       setItems(fallback)
     }
   }, [clinicRefs.roles, open, roles])
@@ -82,7 +82,7 @@ export function RoleDialog({ open, onClose, roles, onRolesChange, onSave }: Role
 
   const handleSave = async () => {
     // Map reordered items back to caller's expected shape
-    const mapped: RoleValue[] = items.map((it) => ({ value: it.name }))
+    const mapped: RoleValue[] = items?.map((it) => ({ value: it.name }))
 
     // Compute new order and update only changed ones using RoleService.updateRole
     const updates: Promise<unknown>[] = []
@@ -120,7 +120,7 @@ export function RoleDialog({ open, onClose, roles, onRolesChange, onSave }: Role
         <Paper variant="outlined" sx={{ p: 1.5, borderRadius: 2, borderColor: '#e5e7eb', background: '#f9fafb' }}>
           {items.length ? (
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }} onDragOver={handleDragOver}>
-              {items.map((item, index) => (
+              {items?.map((item, index) => (
                 <Box
                   key={item.id}
                   draggable

@@ -97,7 +97,7 @@ export const PatientDocumentsTable: React.FC<PatientDocumentsTableProps> = ({
               </TableRow>
             </TableHead>
             <TableBody>
-              {documents.map((doc) => (
+              {documents?.map((doc) => (
                 <TableRow key={doc.id} sx={{ '&:nth-of-type(even)': { backgroundColor: '#f5f7fe' } }}>
                   <TableCell sx={{ p: 1, border: 'none' }}>
                     <Checkbox sx={{ color: '#bbb', '&.Mui-checked': { color: '#0029d9' } }} />
@@ -180,7 +180,7 @@ export const PatientDocumentsTable: React.FC<PatientDocumentsTableProps> = ({
           </Box>
         </Box>
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-          {documentTemplates.map((template, idx) => (
+          {documentTemplates?.map((template, idx) => (
             <Box
               key={template.id}
               sx={{
@@ -206,7 +206,7 @@ export const PatientDocumentsTable: React.FC<PatientDocumentsTableProps> = ({
           </Typography>
         </Box>
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-          {mozForms.map((template, idx) => (
+          {mozForms?.map((template, idx) => (
             <Box
               key={template.id}
               sx={{

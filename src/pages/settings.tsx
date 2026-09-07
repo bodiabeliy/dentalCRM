@@ -374,7 +374,7 @@ export default function SettingsPage() {
         <FormControl sx={{ mt: 4 }} fullWidth>
           <InputLabel>{t('settings:profile.interfaceLanguage')}</InputLabel>
           <Select value={formData.lang} label={t('settings:profile.interfaceLanguage')} onChange={handleLanguageChange}>
-            {systemLanguage.map((currentLanguage: Language) => (
+            {systemLanguage?.map((currentLanguage: Language) => (
               <MenuItem key={currentLanguage.name} value={currentLanguage.name} disabled={!currentLanguage.isAvialable}>
                 {currentLanguage.title}
               </MenuItem>

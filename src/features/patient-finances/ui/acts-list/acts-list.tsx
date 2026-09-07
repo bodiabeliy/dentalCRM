@@ -72,7 +72,7 @@ export const ActsList: React.FC<ActsListProps> = ({
         </Typography>
       </Box>
       <Box sx={{ borderRadius: 1 }}>
-        {acts.map((act, index) => (
+        {acts?.map((act, index) => (
           <Box key={act.id}>
             <Box
               sx={{
@@ -119,7 +119,7 @@ export const ActsList: React.FC<ActsListProps> = ({
                 <Typography variant="body1" sx={{ minWidth: 60 }}>
                   {act.number}
                 </Typography>
-                {act.tags.map((tag, idx) => (
+                {act.tags?.map((tag, idx) => (
                   <Box
                     key={idx}
                     sx={{
@@ -176,7 +176,7 @@ export const ActsList: React.FC<ActsListProps> = ({
                     </TableRow>
                   </TableHead>
                   <TableBody>
-                    {details.map((d) => (
+                    {details?.map((d) => (
                       <TableRow key={d.id}>
                         <TableCell
                           sx={{

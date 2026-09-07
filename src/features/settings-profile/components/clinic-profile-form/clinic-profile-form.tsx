@@ -122,7 +122,7 @@ export function ClinicProfileForm({ setSubtitle }: { setSubtitle: (subtitle: str
   }
 
   // Derived lowercase values for rendering inside selects
-  const uiCurrencies = (formData?.currenciesIso || []).map(toKey)
+  const uiCurrencies = (formData?.currenciesIso || [])?.map(toKey)
   const uiMainCurrency = toKey(formData?.mainCurrencyIso)
 
   const formSubmit = useCallback(async () => {
@@ -257,7 +257,7 @@ export function ClinicProfileForm({ setSubtitle }: { setSubtitle: (subtitle: str
                   'UTC+10',
                   'UTC+11',
                   'UTC+12',
-                ].map((tz) => (
+                ]?.map((tz) => (
                   <MenuItem key={tz} value={tz}>
                     {t(`settings:clinicProfile.timezones.${tz}`, tz)}
                   </MenuItem>
@@ -373,7 +373,7 @@ export function ClinicProfileForm({ setSubtitle }: { setSubtitle: (subtitle: str
                 value={uiCurrencies}
                 onChange={(event) => {
                   const next = (event.target.value as string[])
-                    .map(toKey)
+                    ?.map(toKey)
                     .filter((v): v is string => typeof v === 'string')
                   handleFieldChange('currenciesIso', next)
                 }}
@@ -381,7 +381,7 @@ export function ClinicProfileForm({ setSubtitle }: { setSubtitle: (subtitle: str
                 renderValue={(selected) => {
                   const values = (selected as string[]) || []
                   if (values.length === 0) return ''
-                  const labels = values.map((val) => currencyLabel(val))
+                  const labels = values?.map((val) => currencyLabel(val))
                   // Show labels when the list is short; otherwise show a translated summary
                   return labels.length <= 1
                     ? labels.join(', ')
@@ -389,11 +389,11 @@ export function ClinicProfileForm({ setSubtitle }: { setSubtitle: (subtitle: str
                 }}
                 sx={{ '& .MuiInputBase-root': { borderRadius: '8px' }, width: '100%' }}
                 label={t('settings:clinicProfile.useCurrencies')}>
-                {currencyGroupConfig.map((group) => [
+                {currencyGroupConfig?.map((group) => [
                   <ListSubheader key={group.key} sx={{ fontWeight: 600, color: '#666' }}>
                     {currencyGroupLabel(group.key)}
                   </ListSubheader>,
-                  ...group.codes.map((code) => (
+                  ...group.codes?.map((code) => (
                     <MenuItem key={code} value={code}>
                       <Checkbox
                         checked={uiCurrencies.indexOf(code) > -1}
@@ -436,7 +436,7 @@ export function ClinicProfileForm({ setSubtitle }: { setSubtitle: (subtitle: str
                   'ron',
                   'huf',
                   'bgn',
-                ].map((code) => (
+                ]?.map((code) => (
                   <MenuItem key={code} value={code}>
                     {currencyLabel(code)}
                   </MenuItem>

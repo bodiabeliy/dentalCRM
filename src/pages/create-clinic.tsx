@@ -125,7 +125,7 @@ export function CreateClinicPage() {
                   {t('create.yourClinic', { ns: 'clinic' })}
                 </Typography>
               )}
-              {currentClinicsList.map((currentClinic: IClinic) => (
+              {currentClinicsList?.map((currentClinic: IClinic) => (
                 <Box key={currentClinic.id} sx={{ mt: isMobile ? 2 : 0 }}>
                   <Box
                     sx={{
@@ -297,7 +297,7 @@ export function CreateClinicPage() {
             </Box>
           ) : (
             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-              {currentClinicInviteList.map((invite: IClinicInvite) => (
+              {currentClinicInviteList?.map((invite: IClinicInvite) => (
                 <Box key={invite.id}>
                   <Typography variant={isMobile ? 'subtitle1' : 'h6'} sx={{ color: '#7324d5' }}>
                     {t('create.inviteFrom', { ns: 'clinic' })}

@@ -179,7 +179,7 @@ const Teeth = ({
   return (
     <>
       <Box sx={{ display: 'flex', gap: isMobile ? 0.5 : 1, borderBottom: '2px solid #eee', paddingBottom: 1 }}>
-        {topAdult.map((T, i) => (
+        {topAdult?.map((T, i) => (
           <Box
             key={i}
             onClick={() => handleToothClick(T.label)}
@@ -219,7 +219,7 @@ const Teeth = ({
         ))}
       </Box>
       <Box sx={{ display: 'flex', gap: isMobile ? 0.5 : 1 }}>
-        {bottomAdult.map((T, i) => (
+        {bottomAdult?.map((T, i) => (
           <Box
             key={i}
             onClick={() => handleToothClick(T.label)}
@@ -285,7 +285,7 @@ const KidsTeeth = ({
   return (
     <>
       <Box sx={{ display: 'flex', gap: isMobile ? 0.5 : 1, borderBottom: '2px solid #eee', paddingBottom: 1 }}>
-        {topKid.map((T, i) => (
+        {topKid?.map((T, i) => (
           <Box
             key={i}
             onClick={() => handleToothClick(T.label)}
@@ -325,7 +325,7 @@ const KidsTeeth = ({
         ))}
       </Box>
       <Box sx={{ display: 'flex', gap: isMobile ? 0.5 : 1 }}>
-        {bottomKid.map((T, i) => (
+        {bottomKid?.map((T, i) => (
           <Box
             key={i}
             onClick={() => handleToothClick(T.label)}

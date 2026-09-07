@@ -5,7 +5,7 @@ export interface Event {
 }
 
 export function getTimeInMinutes(time: string) {
-  const [h, m] = time.split(':').map(Number)
+  const [h, m] = time.split(':')?.map(Number)
   return h * 60 + m
 }
 
@@ -31,7 +31,7 @@ export function computeOverlaps<T extends Event>(
     const group = sorted.filter(
       (e) => getTimeInMinutes(e.scheduledTimeStart) < end && getTimeInMinutes(e.scheduledTimeEnd) > start
     )
-    const maxCols = Math.max(...group.map((e) => active.find((a) => a.event === e)?.index ?? 0)) + 1
+    const maxCols = Math.max(...group?.map((e) => active.find((a) => a.event === e)?.index ?? 0)) + 1
     result.push({ ...event, overlapGroupSize: maxCols, overlapGroupIndex: col })
   }
   return result
@@ -66,7 +66,7 @@ export function partitionIntervals<T extends Event>(
   if (events.length === 0) return []
 
   const timePoints = Array.from(
-    new Set([...events.map((a) => a.scheduledTimeStart), ...events.map((a) => a.scheduledTimeEnd)])
+    new Set([...events?.map((a) => a.scheduledTimeStart), ...events?.map((a) => a.scheduledTimeEnd)])
   ).sort()
 
   const result: Array<{ start: string; end: string; assistants: Array<T> }> = []
@@ -82,7 +82,7 @@ export function partitionIntervals<T extends Event>(
 }
 
 export function getMaxOverlapCount<T extends Event>(events: Array<T>): Array<T & { maxOverlap: number }> {
-  return events.map((a) => {
+  return events?.map((a) => {
     let max = 1
     const start = a.scheduledTimeStart
     const end = a.scheduledTimeEnd

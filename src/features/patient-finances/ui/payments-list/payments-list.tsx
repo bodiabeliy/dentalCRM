@@ -28,7 +28,7 @@ export const PaymentsList: React.FC<PaymentsListProps> = ({ payments }) => {
         </Typography>
       </Box>
       <Box sx={{}}>
-        {payments.map((payment, index) => (
+        {payments?.map((payment, index) => (
           <Box
             key={payment.id}
             sx={{

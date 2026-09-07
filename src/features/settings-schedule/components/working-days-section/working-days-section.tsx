@@ -28,7 +28,7 @@ interface WorkingDaysSectionProps {
 
 export function WorkingDaysSection({ workingDays, setWorkingDays }: WorkingDaysSectionProps) {
   const getDefaultDays = () =>
-    daysOfWeek.map((d) => ({
+    daysOfWeek?.map((d) => ({
       key: d.key,
       enabled: d.key !== 'sat' && d.key !== 'sun',
       start: null,
@@ -37,11 +37,11 @@ export function WorkingDaysSection({ workingDays, setWorkingDays }: WorkingDaysS
   const days = workingDays.length ? workingDays : getDefaultDays()
 
   const handleToggle = (idx: number) => {
-    const updated = days.map((d, i) => (i === idx ? { ...d, enabled: !d.enabled } : d))
+    const updated = days?.map((d, i) => (i === idx ? { ...d, enabled: !d.enabled } : d))
     setWorkingDays(updated)
   }
   const handleTimeChange = (idx: number, field: 'start' | 'end', value: Date | null) => {
-    const updated = days.map((d, i) => (i === idx ? { ...d, [field]: value } : d))
+    const updated = days?.map((d, i) => (i === idx ? { ...d, [field]: value } : d))
     setWorkingDays(updated)
   }
 
@@ -54,7 +54,7 @@ export function WorkingDaysSection({ workingDays, setWorkingDays }: WorkingDaysS
         Робочі дні
       </Typography>
       <Box display="flex" flexDirection="column" gap={3}>
-        {days.map((day, idx) => (
+        {days?.map((day, idx) => (
           <Box key={day.key} display="flex" alignItems="center" gap={1}>
             <Switch
               size={isMobile ? 'small' : 'medium'}

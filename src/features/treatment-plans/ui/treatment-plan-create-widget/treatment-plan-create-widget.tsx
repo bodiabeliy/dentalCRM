@@ -125,7 +125,7 @@ export function TreatmentPlanCreateWidget({ onClose }: TreatmentPlanCreateWidget
 
   const handleDeleteTreatment = (visitId: string, treatmentId: string) => {
     setVisits((prev) =>
-      prev.map((visit) =>
+      prev?.map((visit) =>
         visit.id === visitId
           ? { ...visit, treatments: visit.treatments.filter((treatment) => treatment.id !== treatmentId) }
           : visit
@@ -145,7 +145,7 @@ export function TreatmentPlanCreateWidget({ onClose }: TreatmentPlanCreateWidget
     setVisits((prev) => {
       if (prev.length === 0) return prev
       const lastVisit = prev[prev.length - 1]
-      return prev.map((visit) =>
+      return prev?.map((visit) =>
         visit.id === lastVisit.id ? { ...visit, treatments: [...visit.treatments, newTreatment] } : visit
       )
     })
@@ -175,11 +175,11 @@ export function TreatmentPlanCreateWidget({ onClose }: TreatmentPlanCreateWidget
   }
 
   const handleVisitNameChange = (visitId: string, name: string) => {
-    setVisits((prev) => prev.map((visit) => (visit.id === visitId ? { ...visit, visitName: name } : visit)))
+    setVisits((prev) => prev?.map((visit) => (visit.id === visitId ? { ...visit, visitName: name } : visit)))
   }
 
   const handleVisitUpdate = (visitId: string, updates: Partial<(typeof visits)[0]>) => {
-    setVisits((prev) => prev.map((visit) => (visit.id === visitId ? { ...visit, ...updates } : visit)))
+    setVisits((prev) => prev?.map((visit) => (visit.id === visitId ? { ...visit, ...updates } : visit)))
   }
 
   return (
@@ -253,7 +253,7 @@ export function TreatmentPlanCreateWidget({ onClose }: TreatmentPlanCreateWidget
                   <ChevronIcon style={{ transform: 'rotate(90deg)', width: 24, height: 24 }} />
                 </IconButton>
               </Box>
-              {visits.map((visit) => (
+              {visits?.map((visit) => (
                 <VisitCard
                   key={visit.id}
                   visitNumber={visit.visitNumber}
@@ -361,7 +361,7 @@ const TreatmentCategory = ({ items, expanded, onToggle, onTreatmentSelect }: Tre
           </RadioGroup>
         </Box>
       </Box>
-      {items.map((category) => (
+      {items?.map((category) => (
         <TreatmentCategoryAccordion
           key={category.id}
           title={category.title}

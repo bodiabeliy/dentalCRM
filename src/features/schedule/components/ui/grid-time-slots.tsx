@@ -35,7 +35,7 @@ export const GridTimeSlots = React.memo(
   }: GridTimeSlotsProps) => {
     return (
       <>
-        {HOUR_SLOTS.map((time, timeIndex) => (
+        {HOUR_SLOTS?.map((time, timeIndex) => (
           <React.Fragment key={`row-${timeIndex}`}>
             <Box
               sx={{
@@ -64,8 +64,8 @@ export const GridTimeSlots = React.memo(
                 {time}
               </Typography>
             </Box>
-            {days.map((_, dayIdx) =>
-              cabinets.map((cabinet, cIdx) => (
+            {days?.map((_, dayIdx) =>
+              cabinets?.map((cabinet, cIdx) => (
                 <GridCell
                   key={`${dayIdx}-${time}-${cabinet.id}`}
                   dayIdx={dayIdx}

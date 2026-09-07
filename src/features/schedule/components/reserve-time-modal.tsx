@@ -113,7 +113,7 @@ const ReserveTimeModal: React.FC<ReserveTimeModalProps> = ({ open, onClose, onSa
         <FormControl fullWidth sx={{ flex: 1, mt: 2 }}>
           <InputLabel>{t('reserve-time-modal.type')}</InputLabel>
           <Select label={t('reserve-time-modal.type')} value={type} onChange={(e) => setType(e.target.value)} fullWidth>
-            {RESERVE_TYPES.map((type) => (
+            {RESERVE_TYPES?.map((type) => (
               <MenuItem key={type.value} value={type.value}>
                 {type.label}
               </MenuItem>
@@ -127,7 +127,7 @@ const ReserveTimeModal: React.FC<ReserveTimeModalProps> = ({ open, onClose, onSa
             value={cabinetId}
             onChange={(e) => setCabinetId(Number(e.target.value))}
             fullWidth>
-            {scheduleData?.cabinets.map((cab) => (
+            {scheduleData?.cabinets?.map((cab) => (
               <MenuItem key={cab.id} value={cab.id}>
                 {cab.name}
               </MenuItem>
@@ -221,7 +221,7 @@ const ReserveTimeModal: React.FC<ReserveTimeModalProps> = ({ open, onClose, onSa
             gap: isMobile ? 2 : 0,
           }}>
           <Box sx={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: isMobile ? 1 : 0 }}>
-            {times.map((time) => (
+            {times?.map((time) => (
               <Box
                 onClick={() => handleDurationChange(time)}
                 sx={{

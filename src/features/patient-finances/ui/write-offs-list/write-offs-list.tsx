@@ -133,7 +133,7 @@ export const WriteOffsList: React.FC<WriteOffsListProps> = ({ writeOffs }) => {
         <Box sx={{ minWidth: 40 }} />
       </Box>
       <Box sx={{ borderRadius: 1 }}>
-        {writeOffs.map((writeOff, index) => (
+        {writeOffs?.map((writeOff, index) => (
           <Box
             key={writeOff.id}
             sx={{

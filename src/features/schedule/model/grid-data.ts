@@ -37,20 +37,20 @@ export const useGridData = (
     const totalColumns = days.length * cabinets.length
 
     const events = days
-      .map((day, dayIdx) => {
+      ?.map((day, dayIdx) => {
         const dayKey = format(day, 'yyyy-MM-dd')
         const dayScheduleData = multiDayScheduleData?.[dayKey]
         if (!dayScheduleData) {
           return []
         }
         return cabinets
-          .map((cabinet: (typeof cabinets)[number], cIdx: number) => {
+          ?.map((cabinet: (typeof cabinets)[number], cIdx: number) => {
             const cabinetVisits = allVisits.filter(
               (visit) =>
                 visit.cabinetId === cabinet.id &&
                 format(new Date(visit.visit_start), 'yyyy-MM-dd') === format(day, 'yyyy-MM-dd')
             )
-            return cabinetVisits.map((visit) => {
+            return cabinetVisits?.map((visit) => {
               const event = mapApiVisitToEvent(
                 visit,
                 cabinet.id,

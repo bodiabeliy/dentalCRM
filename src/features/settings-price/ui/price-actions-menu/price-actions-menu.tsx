@@ -16,7 +16,7 @@ export function PriceActionsMenu({ anchorEl, open, onClose, actions }: PriceActi
       onClose={onClose}
       anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
       transformOrigin={{ vertical: 'top', horizontal: 'right' }}>
-      {actions.map((action) => (
+      {actions?.map((action) => (
         <MenuItem
           key={action.label}
           onClick={action.onClick}

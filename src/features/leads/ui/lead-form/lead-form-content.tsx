@@ -43,7 +43,7 @@ export function LeadInfoContent({ onClick, taskOnClick }: LeadInfoContentProps) 
               color: '#0029d9',
             },
           }}>
-          {TAB_LABELS.map((label: string) => (
+          {TAB_LABELS?.map((label: string) => (
             <Tab
               key={label}
               sx={{

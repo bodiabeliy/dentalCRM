@@ -23,7 +23,7 @@ export function NomenclaturePositionsTable({ positions, onMenuOpen }: Nomenclatu
           </TableRow>
         </TableHead>
         <TableBody>
-          {positions.map((row, idx) => (
+          {positions?.map((row, idx) => (
             <TableRow
               key={row.id + idx}
               sx={{

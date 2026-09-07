@@ -40,7 +40,7 @@ export function PermissionsManagement() {
   const roleItems = useMemo(() => roleData?.items || [], [roleData])
 
   // Get role names from the roles array
-  const roleNames = useMemo(() => roleItems.map((role) => role.name), [roleItems]) // Use server roles (roleItems) for headers and matrix sizing
+  const roleNames = useMemo(() => roleItems?.map((role) => role.name), [roleItems]) // Use server roles (roleItems) for headers and matrix sizing
 
   // Use the total rows from our permissions array
   const totalRows = localPermissions.length

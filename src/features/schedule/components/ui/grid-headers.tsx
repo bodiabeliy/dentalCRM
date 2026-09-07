@@ -41,7 +41,7 @@ export const GridHeaders = React.memo(
             {days.length === 1 ? format(days[0], 'dd.MM, EEEE', { locale: uk }) : ''}
           </Typography>
         </Box>
-        {days.map((day, dayIdx) => (
+        {days?.map((day, dayIdx) => (
           <Box
             key={`day-header-${dayIdx}`}
             sx={{
@@ -82,8 +82,8 @@ export const GridHeaders = React.memo(
             pointerEvents: 'none',
           }}
         />
-        {days.map((_, dayIdx) => {
-          return cabinets.map((cabinet, cIdx) => {
+        {days?.map((_, dayIdx) => {
+          return cabinets?.map((cabinet, cIdx) => {
             const isLastCabinet = cIdx === cabinets.length - 1
             const isLastDay = dayIdx === days.length - 1
             const isFirstCabinet = cIdx === 0

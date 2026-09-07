@@ -181,7 +181,7 @@ const additionalNames = [
   'Лідія Петрівна',
 ]
 
-const additionalLeads: Lead[] = additionalNames.map((name, index) => {
+const additionalLeads: Lead[] = additionalNames?.map((name, index) => {
   const baseDate = new Date(2024, 2, 21) // March 21, 2024
   const registrationDate = new Date(baseDate)
   registrationDate.setDate(baseDate.getDate() + index)

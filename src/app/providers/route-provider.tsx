@@ -180,8 +180,8 @@ export function RouteProvider() {
   return (
     <Routes>
       {isAuthorization
-        ? authorizedRoutes.map((route) => <Route key={route.path} element={route.element} path={route.path} />)
-        : unAuthorizedRoutes.map((route) => <Route key={route.path} element={route.element} path={route.path} />)}
+        ? authorizedRoutes?.map((route) => <Route key={route.path} element={route.element} path={route.path} />)
+        : unAuthorizedRoutes?.map((route) => <Route key={route.path} element={route.element} path={route.path} />)}
     </Routes>
   )
 }

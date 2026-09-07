@@ -57,15 +57,15 @@ export function LinkToProductsDialog({ open, onClose, onSave }: LinkToProductsDi
   }
 
   const handleChangeName = (idx: number, value: string) => {
-    setItems(items.map((item, i) => (i === idx ? { ...item, name: value } : item)))
+    setItems(items?.map((item, i) => (i === idx ? { ...item, name: value } : item)))
   }
 
   const handleChangeQuantity = (idx: number, delta: number) => {
-    setItems(items.map((item, i) => (i === idx ? { ...item, quantity: Math.max(1, item.quantity + delta) } : item)))
+    setItems(items?.map((item, i) => (i === idx ? { ...item, quantity: Math.max(1, item.quantity + delta) } : item)))
   }
 
   const handleCheck = (idx: number, checked: boolean) => {
-    setItems(items.map((item, i) => (i === idx ? { ...item, checked } : item)))
+    setItems(items?.map((item, i) => (i === idx ? { ...item, checked } : item)))
   }
 
   const total = items.length * PRODUCT_PRICE
@@ -81,7 +81,7 @@ export function LinkToProductsDialog({ open, onClose, onSave }: LinkToProductsDi
       <DialogContent sx={{ pb: 0, background: '#fff' }}>
         <Typography variant="h6">Санітарний мінімум</Typography>
         <Box sx={{ mt: 4 }}>
-          {items.map((item, idx) => (
+          {items?.map((item, idx) => (
             <Box
               key={idx}
               sx={{
@@ -104,7 +104,7 @@ export function LinkToProductsDialog({ open, onClose, onSave }: LinkToProductsDi
                       label="Матеріал"
                       onChange={(e) => handleChangeName(idx, e.target.value as string)}
                       sx={{}}>
-                      {PRODUCT_OPTIONS.map((option) => (
+                      {PRODUCT_OPTIONS?.map((option) => (
                         <MenuItem key={option} value={option}>
                           {option}
                         </MenuItem>

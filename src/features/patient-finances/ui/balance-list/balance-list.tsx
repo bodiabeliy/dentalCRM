@@ -26,7 +26,7 @@ export const BalanceList: React.FC<BalanceListProps> = ({ payments }) => {
         </Typography>
       </Box>
       <Box>
-        {payments.map((payment, index) => (
+        {payments?.map((payment, index) => (
           <Box
             key={payment.id}
             sx={{

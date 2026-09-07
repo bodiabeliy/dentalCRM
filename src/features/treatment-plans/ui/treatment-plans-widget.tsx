@@ -45,7 +45,7 @@ export function TreatmentPlansWidget() {
       {!isCreateOpen && agreedPlan && <TreatmentPlanCard plan={agreedPlan} isAgreed={true} />}
       {!isCreateOpen && isAllPlans && (
         <Box sx={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: 3, mt: 3 }}>
-          {treatmentPlans.map((plan) => (
+          {treatmentPlans?.map((plan) => (
             <TreatmentPlanCard key={plan.id} plan={plan} isAgreed={false} />
           ))}
         </Box>

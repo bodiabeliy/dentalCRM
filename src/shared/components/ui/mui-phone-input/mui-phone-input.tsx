@@ -55,7 +55,7 @@ const MuiPhoneInput = (props: MuiPhoneInputProps) => {
         )
       }}
       {...rest}>
-      {countryOptions.map((option: CountryOption) => {
+      {countryOptions?.map((option: CountryOption) => {
         if (typeof option === 'string') {
           const label = (labels && labels[option]) || option
           return (

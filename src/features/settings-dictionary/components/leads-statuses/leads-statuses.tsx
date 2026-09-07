@@ -140,7 +140,7 @@ export function LeadsStatuses() {
               </TableRow>
             </TableHead>
             <TableBody>
-              {mockRows.map((row, idx) => (
+              {mockRows?.map((row, idx) => (
                 <TableRow
                   key={idx}
                   sx={{

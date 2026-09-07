@@ -108,7 +108,7 @@ export function VisitCard({
       </Box>
       <TeethChart type={teethType} selectedTeeth={selectedTeeth} onTeethSelect={handleTeethSelect} />
       <Box>
-        {treatments.map((treatment) => (
+        {treatments?.map((treatment) => (
           <TreatmentItem
             key={treatment.id}
             name={treatment.name}

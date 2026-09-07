@@ -3,7 +3,7 @@ export function formatDate(date: Date): string {
 }
 
 export function parseTime(time: string): number {
-  const [h, m] = time.split(':').map(Number)
+  const [h, m] = time.split(':')?.map(Number)
   return h * 60 + m
 }
 

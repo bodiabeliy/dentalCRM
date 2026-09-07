@@ -88,7 +88,7 @@ export function EnhancedPermissionsTable({
               </TableCell>
               {/* Dynamically generate table headers based on available roles */}
               {paginatedPermissions.length > 0 &&
-                paginatedPermissions[0].values.map((_, idx) => (
+                paginatedPermissions[0].values?.map((_, idx) => (
                   <TableCell
                     key={idx}
                     sx={{
@@ -109,10 +109,10 @@ export function EnhancedPermissionsTable({
             </TableRow>
           </TableHead>
           <TableBody>
-            {paginatedPermissions.map((permission, idx) => (
+            {paginatedPermissions?.map((permission, idx) => (
               <TableRow key={idx} sx={{ background: idx % 2 === 0 ? '#fafaff' : '#f6f4fd' }}>
                 <TableCell sx={{ fontWeight: 500 }}>{permission.label}</TableCell>
-                {permission.values.map((checked, roleIdx) => (
+                {permission.values?.map((checked, roleIdx) => (
                   <TableCell key={roleIdx} align="center">
                     <Checkbox
                       checked={checked}
@@ -176,7 +176,7 @@ export function RolePermissionsMatrix({
           </TableRow>
         </TableHead>
         <TableBody>
-          {permissions.map((permission, idx) => (
+          {permissions?.map((permission, idx) => (
             <TableRow key={idx} sx={{ background: idx % 2 === 0 ? '#fafaff' : '#f6f4fd' }}>
               <TableCell sx={{ fontWeight: 500 }}>{permission.label}</TableCell>
               <TableCell align="center">

@@ -16,7 +16,7 @@ export function ChatMessages({ messages }: ChatMessagesProps) {
           Сьогодні
         </Typography>
       </Box>
-      {messages.map((message) => (
+      {messages?.map((message) => (
         <Box
           key={message.id}
           sx={{

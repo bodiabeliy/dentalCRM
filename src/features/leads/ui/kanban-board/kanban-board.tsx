@@ -143,7 +143,7 @@ export function KanbanBoard() {
       return
     }
     setColumns((prevCols) => {
-      const newCols = prevCols.map((col) => ({
+      const newCols = prevCols?.map((col) => ({
         ...col,
         leads: [...col.leads],
       }))
@@ -164,7 +164,7 @@ export function KanbanBoard() {
   const handleDropOnColumn = (colIdx: number) => {
     if (!dragItem.current) return
     setColumns((prevCols) => {
-      const newCols = prevCols.map((col) => ({
+      const newCols = prevCols?.map((col) => ({
         ...col,
         leads: [...col.leads],
       }))
@@ -180,7 +180,7 @@ export function KanbanBoard() {
 
   return (
     <Box sx={{ display: 'flex', gap: 2, alignItems: 'flex-start', width: '100%' }}>
-      {columns.map((col, colIdx) => (
+      {columns?.map((col, colIdx) => (
         <Paper
           key={col.key}
           sx={{
@@ -249,7 +249,7 @@ export function KanbanBoard() {
           </Box>
           {/* Leads */}
           <Stack spacing={1.2} sx={{ p: 1.2, pt: 1.5, border: `1px solid ${col.border}` }}>
-            {col.leads.map((lead, leadIdx) => (
+            {col.leads?.map((lead, leadIdx) => (
               <Paper
                 key={getLeadId(lead)}
                 draggable

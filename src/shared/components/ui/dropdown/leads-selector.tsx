@@ -94,7 +94,7 @@ export const LeadSelector = ({
           },
         }}
         MenuListProps={{ sx: { p: 0 } }}>
-        {options.map((option) => (
+        {options?.map((option) => (
           <MenuItem
             key={option.id}
             selected={selectedFilterOption?.id === option.id}

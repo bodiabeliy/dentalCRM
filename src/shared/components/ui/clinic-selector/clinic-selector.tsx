@@ -107,7 +107,7 @@ export const ClinicSelector = ({ clinics, selectedClinic, onClinicSelect, disabl
             },
           }}
           MenuListProps={{ sx: { p: 0 } }}>
-          {clinics.map((clinic) => (
+          {clinics?.map((clinic) => (
             <MenuItem
               key={clinic?.id}
               selected={selectedClinic?.id === clinic?.id}

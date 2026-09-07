@@ -146,7 +146,7 @@ export function CallHistoryTab() {
               </TableRow>
             </TableHead>
             <TableBody>
-              {filteredEntries.map((entry, idx) => (
+              {filteredEntries?.map((entry, idx) => (
                 <TableRow
                   key={entry.id}
                   sx={{

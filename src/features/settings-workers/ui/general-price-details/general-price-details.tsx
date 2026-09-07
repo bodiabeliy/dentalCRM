@@ -161,7 +161,7 @@ export function GeneralPriceDetailsDialog({
               fullWidth
               value={selectedQuestionId}
               onChange={(e) => setSelectedQuestionId(e.target.value)}>
-              {extendedQuestions.map((question) => (
+              {extendedQuestions?.map((question) => (
                 <MenuItem key={question.id} value={question.id}>
                   {question.name}
                 </MenuItem>

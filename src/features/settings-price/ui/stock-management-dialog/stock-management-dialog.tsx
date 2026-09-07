@@ -37,7 +37,7 @@ export function StockManagementDialog({ open, onClose, onSave }: StockManagement
     setCharacteristics((prev) => [...prev, ''])
   }
   const handleCharacteristicChange = (idx: number, value: string) => {
-    setCharacteristics((prev) => prev.map((c, i) => (i === idx ? value : c)))
+    setCharacteristics((prev) => prev?.map((c, i) => (i === idx ? value : c)))
   }
   const handleSave = () => {
     onSave({ warehouse, nomenclature, characteristics, minLimit, planLevel })
@@ -55,7 +55,7 @@ export function StockManagementDialog({ open, onClose, onSave }: StockManagement
         <FormControl fullWidth sx={{ mt: 2 }}>
           <InputLabel>Склад</InputLabel>
           <Select value={warehouse} onChange={(e) => setWarehouse(e.target.value)} label="Склад">
-            {warehouses.map((w) => (
+            {warehouses?.map((w) => (
               <MenuItem key={w.value} value={w.value}>
                 {w.label}
               </MenuItem>
@@ -65,18 +65,18 @@ export function StockManagementDialog({ open, onClose, onSave }: StockManagement
         <FormControl fullWidth sx={{ mt: 2 }}>
           <InputLabel>Номенклатура</InputLabel>
           <Select value={nomenclature} onChange={(e) => setNomenclature(e.target.value)} label="Номенклатура">
-            {nomenclatures.map((n) => (
+            {nomenclatures?.map((n) => (
               <MenuItem key={n.value} value={n.value}>
                 {n.label}
               </MenuItem>
             ))}
           </Select>
         </FormControl>
-        {characteristics.map((c, idx) => (
+        {characteristics?.map((c, idx) => (
           <FormControl fullWidth sx={{ mt: 2 }} key={idx}>
             <InputLabel>Характеристика</InputLabel>
             <Select value={c} onChange={(e) => handleCharacteristicChange(idx, e.target.value)} label="Характеристика">
-              {characteristicsList.map((char) => (
+              {characteristicsList?.map((char) => (
                 <MenuItem key={char.value} value={char.value}>
                   {char.label}
                 </MenuItem>

@@ -11,7 +11,7 @@ export default function BonusSettingsModal({ open, onClose }: { open: boolean; o
   ])
 
   const handleRowChange = (idx: number, field: 'sum' | 'bonus', value: string) => {
-    setRows((rows) => rows.map((row, i) => (i === idx ? { ...row, [field]: value } : row)))
+    setRows((rows) => rows?.map((row, i) => (i === idx ? { ...row, [field]: value } : row)))
   }
 
   const handleAddRow = () => {
@@ -39,7 +39,7 @@ export default function BonusSettingsModal({ open, onClose }: { open: boolean; o
             fullWidth
             inputProps={{ inputMode: 'numeric', pattern: '[0-9 ]*' }}
           />
-          {rows.map((row, idx) => (
+          {rows?.map((row, idx) => (
             <Box key={idx} display="flex" gap={2} alignItems="center">
               <TextField
                 label="Сума"

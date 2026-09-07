@@ -97,7 +97,7 @@ export function TemplateTable({ positions, searchQuery, onPositionsReorder, onTr
           borderCollapse: 'separate',
         }}>
         <TableBody>
-          {filteredPositions.map((row, idx) => (
+          {filteredPositions?.map((row, idx) => (
             <TableRow
               key={row.id + idx}
               draggable

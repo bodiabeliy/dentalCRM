@@ -205,7 +205,7 @@ export function StuffsTable({
             </TableRow>
           </TableHead>
           <TableBody>
-            {sortedstaffs.map((staff, idx) => (
+            {sortedstaffs?.map((staff, idx) => (
               <TableRow
                 key={staff.id}
                 sx={{

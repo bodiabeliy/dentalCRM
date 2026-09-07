@@ -158,7 +158,7 @@ export function ScheduleProvider({ children }: ScheduleProviderProps) {
 
     const filteredCabinets = scheduleData.cabinets
       .filter((cabinet) => settings.enabledCabinets.includes(cabinet.id))
-      .map((cabinet) => {
+      ?.map((cabinet) => {
         // Aggregate all visits from all shifts
         let allVisits = (cabinet.shifts ?? []).flatMap((shift) => shift.visits)
 

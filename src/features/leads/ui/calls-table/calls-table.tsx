@@ -171,7 +171,7 @@ export function LeadCallsTable({ LeadCalls, isExpended }: LeadCallsTableProps) {
           </TableHead>
           <TableBody>
             {!isExpended &&
-              sortedLeadCalls.map((call, idx) => (
+              sortedLeadCalls?.map((call, idx) => (
                 <TableRow
                   key={call.id}
                   sx={{

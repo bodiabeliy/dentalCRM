@@ -82,7 +82,7 @@ export function LeadsTable({
 
   const handleSelectAll = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.checked) {
-      onSelectionChange(leads.map((lead) => lead.id))
+      onSelectionChange(leads?.map((lead) => lead.id))
     } else {
       onSelectionChange([])
     }
@@ -224,7 +224,7 @@ export function LeadsTable({
               </TableRow>
             </TableHead>
             <TableBody>
-              {sortedLeads.map((lead: Lead, idx: number) => (
+              {sortedLeads?.map((lead: Lead, idx: number) => (
                 <TableRow
                   key={lead.id}
                   onContextMenu={(event) => handleContextMenu(event, lead)}

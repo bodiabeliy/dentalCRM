@@ -102,7 +102,7 @@ export function SidebarItemComponent({
       {!isCollapsed && item.hasSubItems && item.subItems && (
         <Collapse in={isExpanded} timeout="auto" unmountOnExit>
           <List component="div" sx={{ mt: '8px', padding: '0 16px' }}>
-            {item.subItems.map((subItem) => (
+            {item.subItems?.map((subItem) => (
               <ListItemButton
                 key={subItem.id}
                 onClick={(e) => {

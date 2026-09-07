@@ -111,7 +111,7 @@ export function useScheduleGrid() {
             visitStart.getMinutes() === timeDate.getMinutes()
           )
         })
-        .map((visit) => mapApiVisitToEvent(visit, cabinet.id, format(currentDay, 'yyyy-MM-dd')))
+        ?.map((visit) => mapApiVisitToEvent(visit, cabinet.id, format(currentDay, 'yyyy-MM-dd')))
     },
     [scheduleData, multiDayScheduleData, days]
   )

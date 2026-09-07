@@ -179,7 +179,7 @@ export function BrancesTable({
             </TableRow>
           </TableHead>
           <TableBody>
-            {sortedBrances.map((brance, idx) => (
+            {sortedBrances?.map((brance, idx) => (
               <TableRow
                 key={brance.id}
                 sx={{

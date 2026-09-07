@@ -108,7 +108,7 @@ export function PatientDetailsWidget({ patient }: PatientDetailsWidgetProps) {
         </TabPanel>
         <TabPanel value={tabValue} index={1}>
           <PatientVisitsList
-            visits={mockVisits.map((v) => ({ ...v, icon: getIconComponent(v.icon) }))}
+            visits={mockVisits?.map((v) => ({ ...v, icon: getIconComponent(v.icon) }))}
             reminders={mockReminders}
             searchQuery={searchQuery}
             onSearchQueryChange={setSearchQuery}

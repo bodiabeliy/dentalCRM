@@ -200,7 +200,7 @@ export function EditStaffForm({ onCancel, staff, onSave }: EditStaffFormProps) {
                   })
                 }
               }}>
-              {clinicReferencies.roles?.map((roleOption) => (
+              {clinicReferencies.roles??.map((roleOption) => (
                 <MenuItem key={roleOption.id} value={roleOption.name}>
                   {roleOption.name}
                 </MenuItem>
@@ -226,7 +226,7 @@ export function EditStaffForm({ onCancel, staff, onSave }: EditStaffFormProps) {
                   })
                 }
               }}>
-              {clinicReferencies?.subClinics?.map((branchOption) => (
+              {clinicReferencies?.subClinics??.map((branchOption) => (
                 <MenuItem key={branchOption.id} value={branchOption.name}>
                   {branchOption.name}
                 </MenuItem>
@@ -292,7 +292,7 @@ export function EditStaffForm({ onCancel, staff, onSave }: EditStaffFormProps) {
                 handleFieldChange('color', selectedColor.name)
               }
             }}>
-            {(clinicReferencies?.clinicColors || []).map((colorOption) => (
+            {(clinicReferencies?.clinicColors || [])?.map((colorOption) => (
               <MenuItem
                 key={colorOption.id}
                 value={colorOption.name}

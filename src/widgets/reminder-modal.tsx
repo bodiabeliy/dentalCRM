@@ -116,7 +116,7 @@ export default function ReminderModal({ open, onClose, onSave }: ReminderModalPr
               borderRadius: '8px',
             },
           }}>
-          {REMINDER_STATUSES.map((status) => (
+          {REMINDER_STATUSES?.map((status) => (
             <MenuItem
               key={status.value}
               onClick={() => handleStatusChange(status.value)}
@@ -132,7 +132,7 @@ export default function ReminderModal({ open, onClose, onSave }: ReminderModalPr
           <FormControl fullWidth>
             <InputLabel>Пацієнт</InputLabel>
             <Select label="Пацієнт" value={patient} onChange={(e) => setPatient(e.target.value)}>
-              {mockEmployees.map((p) => (
+              {mockEmployees?.map((p) => (
                 <MenuItem value={p.name} key={p.id}>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                     <Avatar width={40} height={40} borderRadius="8px" />
@@ -160,7 +160,7 @@ export default function ReminderModal({ open, onClose, onSave }: ReminderModalPr
               fullWidth
               value={getSelectedEmployees()}
               onChange={(_, newValue) => {
-                setResponsible(newValue.map((emp) => emp.id))
+                setResponsible(newValue?.map((emp) => emp.id))
               }}
               options={mockEmployees}
               getOptionLabel={(option) => option.name}
@@ -183,7 +183,7 @@ export default function ReminderModal({ open, onClose, onSave }: ReminderModalPr
                 />
               )}
               renderTags={(value, getTagProps) =>
-                value.map((option, index) => (
+                value?.map((option, index) => (
                   <Chip
                     {...getTagProps({ index })}
                     key={option.id}
@@ -208,7 +208,7 @@ export default function ReminderModal({ open, onClose, onSave }: ReminderModalPr
           <FormControl fullWidth>
             <InputLabel>Пріоритет</InputLabel>
             <Select label="Пріоритет" value={priority} onChange={(e) => setPriority(e.target.value)}>
-              {priorities.map((p) => (
+              {priorities?.map((p) => (
                 <MenuItem value={p} key={p}>
                   {p}
                 </MenuItem>

@@ -166,7 +166,7 @@ export default function IncomeModal({ open, onClose, onSave }: IncomeModalProps)
           <FormControl component="fieldset">
             <FormLabel component="legend">Тип</FormLabel>
             <RadioGroup value={paymentType} onChange={(e) => setPaymentType(e.target.value)} row>
-              {PAYMENT_TYPES.map((type) => (
+              {PAYMENT_TYPES?.map((type) => (
                 <FormControlLabel key={type.value} value={type.value} control={<Radio />} label={type.label} />
               ))}
             </RadioGroup>
@@ -175,7 +175,7 @@ export default function IncomeModal({ open, onClose, onSave }: IncomeModalProps)
             <FormControl fullWidth>
               <InputLabel>Назва каси</InputLabel>
               <Select value={cashRegister} label="Назва каси" onChange={(e) => setCashRegister(e.target.value)}>
-                {CASH_REGISTERS.map((register) => (
+                {CASH_REGISTERS?.map((register) => (
                   <MenuItem value={register.value} key={register.value}>
                     {register.label}
                   </MenuItem>
@@ -207,7 +207,7 @@ export default function IncomeModal({ open, onClose, onSave }: IncomeModalProps)
           <FormControl fullWidth>
             <InputLabel>Стаття доходу</InputLabel>
             <Select value={incomeArticle} label="Стаття доходу" onChange={(e) => setIncomeArticle(e.target.value)}>
-              {INCOME_ARTICLES.map((article) => (
+              {INCOME_ARTICLES?.map((article) => (
                 <MenuItem value={article.value} key={article.value}>
                   {article.label}
                 </MenuItem>
@@ -220,7 +220,7 @@ export default function IncomeModal({ open, onClose, onSave }: IncomeModalProps)
               value={relatedDocument}
               label="Зв'язаний документ"
               onChange={(e) => setRelatedDocument(e.target.value)}>
-              {RELATED_DOCUMENTS.map((doc) => (
+              {RELATED_DOCUMENTS?.map((doc) => (
                 <MenuItem value={doc.value} key={doc.value}>
                   {doc.label}
                 </MenuItem>

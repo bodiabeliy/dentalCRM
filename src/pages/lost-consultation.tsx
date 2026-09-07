@@ -324,7 +324,7 @@ export function LostConsultationPage() {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {filteredPatients.map((patient, idx) => (
+                {filteredPatients?.map((patient, idx) => (
                   <TableRow
                     key={patient.id}
                     sx={{

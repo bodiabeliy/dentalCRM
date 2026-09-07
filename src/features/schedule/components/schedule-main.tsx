@@ -179,9 +179,9 @@ export function ScheduleMain() {
     }
 
     const query = searchQuery.toLowerCase()
-    const filteredCabinets = filteredScheduleData.cabinets.map((cabinet) => ({
+    const filteredCabinets = filteredScheduleData.cabinets?.map((cabinet) => ({
       ...cabinet,
-      shifts: cabinet.shifts.map((shift) => ({
+      shifts: cabinet.shifts?.map((shift) => ({
         ...shift,
         visits: shift.visits.filter((visit) => {
           const patientName = visit.patient?.name?.toLowerCase() || ''

@@ -241,7 +241,7 @@ export function PriceSectionAccordion({
           <Box sx={{ p: 2, borderTop: '1px solid #eee' }}>
             <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 1 }}>
               {systemColors.clinicColors && systemColors.clinicColors.length > 0 ? (
-                systemColors.clinicColors.map((colorOption, index) => (
+                systemColors.clinicColors?.map((colorOption, index) => (
                   <Box
                     key={colorOption.id || index}
                     onClick={() => handleColorSelect(colorOption)}

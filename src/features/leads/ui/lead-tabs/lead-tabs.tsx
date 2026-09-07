@@ -206,7 +206,7 @@ export function LeadTabs({ activeTab, isMobile, taskOnClick }: LeadTabsProps) {
                 borderColor: 'rgba(0, 41, 217, 0.1)',
                 borderRadius: 2,
               }}>
-              {MockCallList.map((note) => (
+              {MockCallList?.map((note) => (
                 <>
                   <Box
                     sx={{
@@ -310,7 +310,7 @@ export function LeadTabs({ activeTab, isMobile, taskOnClick }: LeadTabsProps) {
               </TableRow>
             </TableHead>
             <TableBody>
-              {MockCallTable.map((call, idx) => (
+              {MockCallTable?.map((call, idx) => (
                 <TableRow
                   sx={{
                     background: idx % 2 === 0 ? '#fff' : '#f8f9fb',

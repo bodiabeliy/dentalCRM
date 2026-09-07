@@ -84,7 +84,7 @@ export function TemplatesContent() {
 
   const handleLeftSideReorder = (sectionId: string, reorderedPositions: PricePosition[]) => {
     setTemplates((prevTemplates) =>
-      prevTemplates.map((section) =>
+      prevTemplates?.map((section) =>
         section.id === sectionId ? { ...section, positions: reorderedPositions } : section
       )
     )
@@ -92,7 +92,7 @@ export function TemplatesContent() {
 
   const handleRightSideReorder = (sectionId: string, reorderedPositions: PricePosition[]) => {
     setTemplatesRightSide((prevTemplates) =>
-      prevTemplates.map((section) =>
+      prevTemplates?.map((section) =>
         section.id === sectionId ? { ...section, positions: reorderedPositions } : section
       )
     )
@@ -109,7 +109,7 @@ export function TemplatesContent() {
     }
 
     setTemplatesRightSide((prev) => {
-      const updatedSections = prev.map((section) =>
+      const updatedSections = prev?.map((section) =>
         section.id === activeSectionId ? { ...section, positions: [...section.positions, newTreatment] } : section
       )
       return updatedSections
@@ -120,7 +120,7 @@ export function TemplatesContent() {
     setTemplatesRightSide(
       (prev) =>
         prev
-          .map((section) =>
+          ?.map((section) =>
             section.id === sectionId
               ? { ...section, positions: section.positions.filter((treatment) => treatment.id !== treatmentId) }
               : section
@@ -154,7 +154,7 @@ export function TemplatesContent() {
 
     const query = searchQuery.toLowerCase()
     return templates
-      .map((section) => ({
+      ?.map((section) => ({
         ...section,
         positions: section.positions.filter(
           (position) => position.name.toLowerCase().includes(query) || position.id.toLowerCase().includes(query)
@@ -169,7 +169,7 @@ export function TemplatesContent() {
 
     const query = rightSearchQuery.toLowerCase()
     return templatesRightSide
-      .map((section) => ({
+      ?.map((section) => ({
         ...section,
         positions: section.positions.filter(
           (position) => position.name.toLowerCase().includes(query) || position.id.toLowerCase().includes(query)
@@ -228,7 +228,7 @@ export function TemplatesContent() {
                 </Typography>
               </Box>
             ) : (
-              filteredTemplates.map((section) => (
+              filteredTemplates?.map((section) => (
                 <TemplateAccordion
                   key={section.id}
                   section={section}
@@ -297,7 +297,7 @@ export function TemplatesContent() {
                 </Typography>
               </Box>
             ) : (
-              filteredRightTemplates.map((section) => (
+              filteredRightTemplates?.map((section) => (
                 <Accordion
                   key={section.id}
                   sx={{
@@ -380,7 +380,7 @@ export function TemplatesContent() {
                         </Typography>
                       </Box>
                     ) : (
-                      section.positions.map((pos, idx) => (
+                      section.positions?.map((pos, idx) => (
                         <Box
                           key={pos.id + idx}
                           draggable

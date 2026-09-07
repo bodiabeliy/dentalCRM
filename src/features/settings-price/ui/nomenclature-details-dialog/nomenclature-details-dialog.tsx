@@ -61,11 +61,11 @@ export function NomenclatureDetailsDialog({ open, onClose, onSave, initialData }
   )
 
   const handleCharacteristicChange = (idx: number, value: string) => {
-    setCharacteristics((prev) => prev.map((c, i) => (i === idx ? { ...c, value } : c)))
+    setCharacteristics((prev) => prev?.map((c, i) => (i === idx ? { ...c, value } : c)))
   }
 
   const handleCharacteristicLabelChange = (idx: number, label: string) => {
-    setCharacteristics((prev) => prev.map((c, i) => (i === idx ? { ...c, label } : c)))
+    setCharacteristics((prev) => prev?.map((c, i) => (i === idx ? { ...c, label } : c)))
   }
 
   const handleAddCharacteristic = () => {
@@ -118,7 +118,7 @@ export function NomenclatureDetailsDialog({ open, onClose, onSave, initialData }
         <FormControl fullWidth sx={{ mt: 2 }}>
           <InputLabel>Одиниця обліку</InputLabel>
           <Select value={unit} onChange={(e) => setUnit(e.target.value)} label="Одиниця обліку">
-            {measurementUnits.map((unit) => (
+            {measurementUnits?.map((unit) => (
               <MenuItem key={unit.value} value={unit.value}>
                 {unit.label}
               </MenuItem>
@@ -134,7 +134,7 @@ export function NomenclatureDetailsDialog({ open, onClose, onSave, initialData }
             </Select>
           </FormControl>
         </Box>
-        {characteristics.map((c, idx) => (
+        {characteristics?.map((c, idx) => (
           <Box key={idx} sx={{ display: 'flex', alignItems: 'center', gap: 2, mt: 2 }}>
             <TextField
               value={c.value}

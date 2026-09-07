@@ -130,7 +130,7 @@ export const OrdersList: React.FC<OrdersListProps> = ({ orders, expandedOrders, 
         <Box sx={{ minWidth: 40 }} />
       </Box>
       <Box sx={{ borderRadius: 1 }}>
-        {orders.map((order, index) => (
+        {orders?.map((order, index) => (
           <Box key={order.id}>
             <Box
               sx={{
@@ -204,7 +204,7 @@ export const OrdersList: React.FC<OrdersListProps> = ({ orders, expandedOrders, 
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {order.items.map((item) => (
+                  {order.items?.map((item) => (
                     <TableRow key={item.id}>
                       <TableCell sx={{ border: 'none', fontSize: 12 }}>{item.name}</TableCell>
                       <TableCell sx={{ border: 'none', fontSize: 12 }}>{item.quantity}</TableCell>

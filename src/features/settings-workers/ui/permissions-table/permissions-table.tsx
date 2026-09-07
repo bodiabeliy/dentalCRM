@@ -22,10 +22,10 @@ export function PermissionsTable({ permissions }: PermissionsTableProps) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {permissions.map((permission, idx) => (
+          {permissions?.map((permission, idx) => (
             <TableRow key={permission.label} sx={{ background: idx % 2 === 0 ? '#fafaff' : '#f6f4fd' }}>
               <TableCell sx={{ fontWeight: 500 }}>{permission.label}</TableCell>
-              {permission.values.map((checked, i) => (
+              {permission.values?.map((checked, i) => (
                 <TableCell key={i} align="center">
                   <Checkbox checked={checked} sx={{ p: 0 }} />
                 </TableCell>

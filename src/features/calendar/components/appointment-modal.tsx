@@ -176,7 +176,7 @@ export const AppointmentModal: React.FC<AppointmentModalProps> = ({
                   borderRadius: '8px',
                 },
               }}>
-              {EVENT_STATUSES.map((status) => (
+              {EVENT_STATUSES?.map((status) => (
                 <MenuItem
                   key={status.value}
                   onClick={() => handleStatusChange(status.value)}

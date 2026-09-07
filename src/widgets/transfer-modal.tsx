@@ -114,7 +114,7 @@ export default function TransferModal({ open, onClose, onSave }: TransferModalPr
             </Typography>
             <FormControl component="fieldset" sx={{ mb: 2 }}>
               <RadioGroup value={fromType} onChange={(e) => setFromType(e.target.value)} row>
-                {FROM_TYPES.map((type) => (
+                {FROM_TYPES?.map((type) => (
                   <FormControlLabel
                     key={type.value}
                     value={type.value}
@@ -130,7 +130,7 @@ export default function TransferModal({ open, onClose, onSave }: TransferModalPr
                 value={fromCashRegister}
                 label={t('transfer.fromRegister', { ns: 'finance' })}
                 onChange={(e) => setFromCashRegister(e.target.value)}>
-                {CASH_REGISTERS.map((register) => (
+                {CASH_REGISTERS?.map((register) => (
                   <MenuItem value={register.value} key={register.value}>
                     {t(`transfer.${register.labelKey}`, { ns: 'finance' })}
                   </MenuItem>
@@ -144,7 +144,7 @@ export default function TransferModal({ open, onClose, onSave }: TransferModalPr
             </Typography>
             <FormControl component="fieldset" sx={{ mb: 2 }}>
               <RadioGroup value={toType} onChange={(e) => setToType(e.target.value)} row>
-                {TO_TYPES.map((type) => (
+                {TO_TYPES?.map((type) => (
                   <FormControlLabel
                     key={type.value}
                     value={type.value}
@@ -161,7 +161,7 @@ export default function TransferModal({ open, onClose, onSave }: TransferModalPr
                   value={toCashRegister}
                   label={t('transfer.toRegister', { ns: 'finance' })}
                   onChange={(e) => setToCashRegister(e.target.value)}>
-                  {CASH_REGISTERS.map((register) => (
+                  {CASH_REGISTERS?.map((register) => (
                     <MenuItem value={register.value} key={register.value}>
                       {t(`transfer.${register.labelKey}`, { ns: 'finance' })}
                     </MenuItem>

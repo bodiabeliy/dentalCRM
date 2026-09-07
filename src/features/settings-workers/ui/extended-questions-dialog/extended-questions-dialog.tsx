@@ -64,7 +64,7 @@ export function ExtendedQuestionsDialog({
     const validQuestions = questions.filter((question) => question.name.trim() !== '')
 
     // Create new question objects with IDs
-    const newQuestions: ExtendedQuestion[] = validQuestions.map((q, index) => ({
+    const newQuestions: ExtendedQuestion[] = validQuestions?.map((q, index) => ({
       id: `question-${Date.now()}-${index}`,
       name: q.name,
       isRequired: q.isRequired,
@@ -126,7 +126,7 @@ export function ExtendedQuestionsDialog({
       <DialogContent sx={{ p: 3 }}>
         {savedQuestions.length > 0 && (
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5, mb: 3 }} onDragOver={handleDragOver}>
-            {savedQuestions.map((item, index) => (
+            {savedQuestions?.map((item, index) => (
               <Box
                 key={item.id}
                 draggable
@@ -161,7 +161,7 @@ export function ExtendedQuestionsDialog({
           </Box>
         )}
 
-        {questions.map((question, index) => (
+        {questions?.map((question, index) => (
           <Box
             key={index}
             sx={{

@@ -101,7 +101,7 @@ export function SalaryPayments() {
             '& .Mui-selected': { color: '#0029d9' },
             ml: 'auto',
           }}>
-          {TAB_LABELS.map((label) => (
+          {TAB_LABELS?.map((label) => (
             <Tab key={label} sx={{ '&.Mui-selected': { color: '#0029d9' }, textTransform: 'none' }} label={label} />
           ))}
         </Tabs>
@@ -160,7 +160,7 @@ export function SalaryPayments() {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {mockRows.map((row, idx) => (
+                {mockRows?.map((row, idx) => (
                   <TableRow
                     key={idx}
                     sx={{
@@ -220,7 +220,7 @@ export function SalaryPayments() {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {mockBonuses.map((row, idx) => (
+                  {mockBonuses?.map((row, idx) => (
                     <TableRow
                       key={idx}
                       sx={{
@@ -301,7 +301,7 @@ export function SalaryPayments() {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {mockBonuses.map((row, idx) => (
+                  {mockBonuses?.map((row, idx) => (
                     <TableRow
                       key={idx}
                       sx={{

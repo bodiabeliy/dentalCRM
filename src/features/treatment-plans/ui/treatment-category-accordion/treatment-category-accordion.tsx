@@ -66,7 +66,7 @@ export function TreatmentCategoryAccordion({
         />
       </AccordionSummary>
       <AccordionDetails>
-        {items.map((item, index) => (
+        {items?.map((item, index) => (
           <Box
             key={index}
             onClick={() => handleTreatmentClick(item)}

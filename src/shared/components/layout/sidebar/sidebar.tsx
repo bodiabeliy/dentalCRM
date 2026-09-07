@@ -266,7 +266,7 @@ export const Sidebar = ({ isCollapsed }: SidebarProps) => {
             },
           }),
         }}>
-        {SIDEBAR_SECTIONS.map((section) => (
+        {SIDEBAR_SECTIONS?.map((section) => (
           <SidebarSectionComponent
             key={section.id}
             section={section}

@@ -21,7 +21,7 @@ export function PriceDetailsDialog({ open, onClose, names, onNamesChange, onSave
   }
 
   const handleNameChange = (idx: number, val: string) => {
-    onNamesChange(names.map((r, i) => (i === idx ? val : r)))
+    onNamesChange(names?.map((r, i) => (i === idx ? val : r)))
   }
 
   const handleSave = () => {
@@ -38,7 +38,7 @@ export function PriceDetailsDialog({ open, onClose, names, onNamesChange, onSave
         </Typography>
       </Box>
       <DialogContent sx={{ pb: 0 }}>
-        {names.map((name, idx) => (
+        {names?.map((name, idx) => (
           <Box key={idx} sx={{ display: 'flex', alignItems: 'center', mb: 2, gap: 2 }}>
             <TextField
               label="Вкажіть назву"

@@ -125,7 +125,7 @@ export function CabinetsManagementSection({ cabinets, setCabinets }: CabinetsMan
             </TableRow>
           </TableHead>
           <TableBody>
-            {activeCabinets.map((cabinet, index) => (
+            {activeCabinets?.map((cabinet, index) => (
               <TableRow
                 key={cabinet.id}
                 draggable

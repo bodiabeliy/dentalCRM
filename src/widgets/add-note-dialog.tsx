@@ -90,7 +90,7 @@ export default function AddNoteDialog({ open, onClose, onSave, visit }: AddNoteD
           <FormControl fullWidth>
             <InputLabel>Пацієнт</InputLabel>
             <Select size="small" label="Пацієнт" value={patient} onChange={(e) => setPatient(e.target.value)}>
-              {mockPatients.map((p) => (
+              {mockPatients?.map((p) => (
                 <MenuItem value={p.name} key={p.id}>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                     <Avatar width={40} height={40} borderRadius="8px" />

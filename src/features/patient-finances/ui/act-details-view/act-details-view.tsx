@@ -78,7 +78,7 @@ export const ActDetailsView: React.FC<ActDetailsViewProps> = ({ actNumber }) => 
 
   const handleSelectAll = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.checked) {
-      setSelectedItems(writeOffItems.map((item) => item.id))
+      setSelectedItems(writeOffItems?.map((item) => item.id))
     } else {
       setSelectedItems([])
     }
@@ -168,7 +168,7 @@ export const ActDetailsView: React.FC<ActDetailsViewProps> = ({ actNumber }) => 
             </TableRow>
           </TableHead>
           <TableBody>
-            {writeOffItems.map((item, index) => (
+            {writeOffItems?.map((item, index) => (
               <TableRow key={item.id} sx={{ bgcolor: index % 2 === 0 ? '#fff' : '#f5f7fe' }}>
                 <TableCell sx={{ border: 'none', p: 1 }}>
                   <Checkbox checked={selectedItems.includes(item.id)} onChange={() => handleSelectItem(item.id)} />

@@ -48,7 +48,7 @@ export default function MassPayoutModal({ open, onClose }: { open: boolean; onCl
   ])
 
   const handleRowChange = (idx: number, field: 'employee' | 'sum', value: string) => {
-    setRows((rows) => rows.map((row, i) => (i === idx ? { ...row, [field]: value } : row)))
+    setRows((rows) => rows?.map((row, i) => (i === idx ? { ...row, [field]: value } : row)))
   }
 
   const handleRemoveRow = (idx: number) => {
@@ -76,14 +76,14 @@ export default function MassPayoutModal({ open, onClose }: { open: boolean; onCl
           <FormControl fullWidth>
             <InputLabel>За місяць</InputLabel>
             <Select value={month} label="За місяць" onChange={(e) => setMonth(e.target.value)}>
-              {monthsUk.map((m) => (
+              {monthsUk?.map((m) => (
                 <MenuItem value={m} key={m}>
                   {m}
                 </MenuItem>
               ))}
             </Select>
           </FormControl>
-          {rows.map((row, idx) => (
+          {rows?.map((row, idx) => (
             <Box key={idx} display="flex" gap={1} alignItems="center">
               <FormControl sx={{ minWidth: 220, flex: '0 0 320px' }}>
                 <InputLabel>Співробітник</InputLabel>
@@ -91,7 +91,7 @@ export default function MassPayoutModal({ open, onClose }: { open: boolean; onCl
                   value={row.employee}
                   label="Співробітник"
                   onChange={(e) => handleRowChange(idx, 'employee', e.target.value)}>
-                  {mockEmployees.map((emp) => (
+                  {mockEmployees?.map((emp) => (
                     <MenuItem value={emp.id} key={emp.id}>
                       {emp.name}
                     </MenuItem>
