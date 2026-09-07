@@ -35,7 +35,7 @@ $api.interceptors.response.use(
 
       try {
         const refreshResponse = await axios.post(
-          `${API_URL}/auth/refresh`,  // ← виправлено
+          `${API_URL}/auth/refresh`, 
           { refresh_token: refreshToken },
           {
             headers: {
